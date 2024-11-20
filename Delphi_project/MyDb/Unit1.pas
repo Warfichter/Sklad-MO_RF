@@ -38,7 +38,7 @@ var
 
 implementation
 
-uses Unit2;
+uses Unit2, prichod;
 
 {$R *.dfm}
 

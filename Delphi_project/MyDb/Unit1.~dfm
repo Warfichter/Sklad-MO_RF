@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 288
-  Top = 219
+  Left = 333
+  Top = 172
   Width = 870
-  Height = 500
+  Height = 499
   Caption = 'Form1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -39,8 +39,17 @@ object Form1: TForm1
     Caption = #1055#1088#1080#1093#1086#1076
     TabOrder = 2
   end
+  object Button4: TButton
+    Left = 400
+    Top = 216
+    Width = 217
+    Height = 105
+    Caption = #1043#1083#1072#1074#1085#1086#1077' '#1084#1077#1085#1102
+    TabOrder = 3
+    OnClick = Button4Click
+  end
   object MainMenu1: TMainMenu
-    Left = 32
+    Left = 40
     Top = 8
     object N1: TMenuItem
       Caption = #1057#1080#1089#1090#1077#1084#1072

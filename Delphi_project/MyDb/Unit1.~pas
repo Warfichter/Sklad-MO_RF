@@ -23,8 +23,10 @@ type
     N10: TMenuItem;
     N11: TMenuItem;
     Button3: TButton;
+    Button4: TButton;
     procedure Button1Click(Sender: TObject);
     procedure N6Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,6 +50,11 @@ end;
 procedure TForm1.N6Click(Sender: TObject);
 begin
 form2.Show();
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+form3.Show()
 end;
 
 end.
