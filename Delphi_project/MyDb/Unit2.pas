@@ -20,6 +20,8 @@ type
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
+    DBMemo1: TDBMemo;
+    Label4: TLabel;
   private
     { Private declarations }
   public

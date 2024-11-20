@@ -1,12 +1,12 @@
 object GlavnoeMeny: TGlavnoeMeny
-  Left = 317
-  Top = 218
-  Width = 870
-  Height = 499
+  Left = 191
+  Top = 160
+  Width = 673
+  Height = 470
   Caption = 'GlavnoeMeny'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = clRed
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
@@ -49,6 +49,21 @@ object GlavnoeMeny: TGlavnoeMeny
     Caption = #1043#1083#1072#1074#1085#1086#1077' '#1084#1077#1085#1102
     TabOrder = 3
     OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 152
+    Top = 352
+    Width = 361
+    Height = 25
+    Caption = #1055#1086#1076#1082#1083#1102#1095#1077#1085#1080#1077' '#1082' '#1083#1086#1082#1072#1083#1100#1085#1086#1081' '#1057#1059#1041#1044
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clLime
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    OnClick = Button5Click
   end
   object MainMenu1: TMainMenu
     Left = 40

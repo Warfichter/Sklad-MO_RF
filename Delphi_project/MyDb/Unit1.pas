@@ -24,6 +24,7 @@ type
     N11: TMenuItem;
     Button3: TButton;
     Button4: TButton;
+    Button5: TButton;
     procedure Button1Click(Sender: TObject);
     procedure N6Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
@@ -31,6 +32,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure N7Click(Sender: TObject);
     procedure N8Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,7 +44,7 @@ var
 
 implementation
 
-uses Unit2, prichod, Unit5, Unit4;
+uses Unit2, prichod, Unit5, Unit4, Unit6;
 
 {$R *.dfm}
 
@@ -79,6 +81,11 @@ end;
 procedure TGlavnoeMeny.N8Click(Sender: TObject);
 begin
 PrichodForm.Show();
+end;
+
+procedure TGlavnoeMeny.Button5Click(Sender: TObject);
+begin
+form6.Show();
 end;
 
 end.

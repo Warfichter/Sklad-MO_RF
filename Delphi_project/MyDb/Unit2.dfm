@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 402
-  Top = 247
+  Left = 176
+  Top = 123
   Width = 870
   Height = 500
   Caption = #1058#1086#1074#1072#1088#1099
@@ -33,6 +33,13 @@ object Form2: TForm2
     Width = 26
     Height = 13
     Caption = #1062#1077#1085#1072
+  end
+  object Label4: TLabel
+    Left = 88
+    Top = 400
+    Width = 61
+    Height = 13
+    Caption = #1054#1055#1048#1057#1040#1053#1048#1045
   end
   object DBGrid1: TDBGrid
     Left = 80
@@ -73,8 +80,8 @@ object Form2: TForm2
       end>
   end
   object DBNavigator1: TDBNavigator
-    Left = 88
-    Top = 384
+    Left = 432
+    Top = 376
     Width = 300
     Height = 25
     DataSource = DataSource1
@@ -106,6 +113,15 @@ object Form2: TForm2
     DataField = 'zena'
     DataSource = DataSource1
     TabOrder = 4
+  end
+  object DBMemo1: TDBMemo
+    Left = 152
+    Top = 384
+    Width = 201
+    Height = 33
+    DataField = 'tovar'
+    DataSource = DataSource1
+    TabOrder = 5
   end
   object MySQLDatabase1: TMySQLDatabase
     Connected = True
