@@ -7,7 +7,7 @@ uses
   Dialogs, StdCtrls, Menus;
 
 type
-  TForm1 = class(TForm)
+  TGlavnoeMeny = class(TForm)
     Button1: TButton;
     Button2: TButton;
     MainMenu1: TMainMenu;
@@ -27,6 +27,10 @@ type
     procedure Button1Click(Sender: TObject);
     procedure N6Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure N7Click(Sender: TObject);
+    procedure N8Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,27 +38,47 @@ type
   end;
 
 var
-  Form1: TForm1;
+  GlavnoeMeny: TGlavnoeMeny;
 
 implementation
 
-uses Unit2;
+uses Unit2, prichod, Unit5, Unit4;
 
 {$R *.dfm}
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TGlavnoeMeny.Button1Click(Sender: TObject);
 begin
 form2.Show();
 end;
 
-procedure TForm1.N6Click(Sender: TObject);
+procedure TGlavnoeMeny.N6Click(Sender: TObject);
 begin
 form2.Show();
 end;
 
-procedure TForm1.Button4Click(Sender: TObject);
+procedure TGlavnoeMeny.Button4Click(Sender: TObject);
 begin
 form3.Show()
+end;
+
+procedure TGlavnoeMeny.Button3Click(Sender: TObject);
+begin
+PrichodForm.Show();
+end;
+
+procedure TGlavnoeMeny.Button2Click(Sender: TObject);
+begin
+PostavForm.Show();
+end;
+
+procedure TGlavnoeMeny.N7Click(Sender: TObject);
+begin
+PostavForm.Show();
+end;
+
+procedure TGlavnoeMeny.N8Click(Sender: TObject);
+begin
+PrichodForm.Show();
 end;
 
 end.

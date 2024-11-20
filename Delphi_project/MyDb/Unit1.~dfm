@@ -1,9 +1,9 @@
-object Form1: TForm1
-  Left = 333
-  Top = 172
+object GlavnoeMeny: TGlavnoeMeny
+  Left = 317
+  Top = 218
   Width = 870
   Height = 499
-  Caption = 'Form1'
+  Caption = 'GlavnoeMeny'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object Button1: TButton
-    Left = 88
-    Top = 48
+    Left = 80
+    Top = 96
     Width = 209
     Height = 97
     Caption = #1058#1086#1074#1072#1088#1099
@@ -24,26 +24,28 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 400
-    Top = 40
+    Left = 360
+    Top = 96
     Width = 217
     Height = 105
     Caption = #1055#1086#1089#1090#1072#1074#1097#1080#1082#1080
     TabOrder = 1
+    OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 80
+    Left = 216
     Top = 216
     Width = 217
     Height = 105
     Caption = #1055#1088#1080#1093#1086#1076
     TabOrder = 2
+    OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 400
-    Top = 216
+    Left = 208
+    Top = 24
     Width = 217
-    Height = 105
+    Height = 49
     Caption = #1043#1083#1072#1074#1085#1086#1077' '#1084#1077#1085#1102
     TabOrder = 3
     OnClick = Button4Click
@@ -68,9 +70,11 @@ object Form1: TForm1
       end
       object N7: TMenuItem
         Caption = #1055#1086#1089#1090#1072#1074#1097#1080#1082#1080
+        OnClick = N7Click
       end
       object N8: TMenuItem
         Caption = #1055#1088#1080#1093#1086#1076
+        OnClick = N8Click
       end
       object N9: TMenuItem
         Caption = #1047#1072#1087#1088#1086#1089#1099
