@@ -1,6 +1,6 @@
 object GlavnoeMeny: TGlavnoeMeny
-  Left = 191
-  Top = 160
+  Left = 324
+  Top = 202
   Width = 673
   Height = 470
   Caption = 'GlavnoeMeny'
@@ -15,44 +15,44 @@ object GlavnoeMeny: TGlavnoeMeny
   PixelsPerInch = 96
   TextHeight = 13
   object Button1: TButton
-    Left = 80
-    Top = 96
-    Width = 209
-    Height = 97
+    Left = 56
+    Top = 64
+    Width = 129
+    Height = 105
     Caption = #1058#1086#1074#1072#1088#1099
     TabOrder = 0
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 360
-    Top = 96
-    Width = 217
+    Left = 232
+    Top = 64
+    Width = 185
     Height = 105
     Caption = #1055#1086#1089#1090#1072#1074#1097#1080#1082#1080
     TabOrder = 1
     OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 216
-    Top = 216
-    Width = 217
+    Left = 464
+    Top = 64
+    Width = 145
     Height = 105
     Caption = #1055#1088#1080#1093#1086#1076
     TabOrder = 2
     OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 208
-    Top = 24
+    Left = 216
+    Top = 16
     Width = 217
-    Height = 49
+    Height = 33
     Caption = #1043#1083#1072#1074#1085#1086#1077' '#1084#1077#1085#1102
     TabOrder = 3
     OnClick = Button4Click
   end
   object Button5: TButton
-    Left = 152
-    Top = 352
+    Left = 144
+    Top = 368
     Width = 361
     Height = 25
     Caption = #1055#1086#1076#1082#1083#1102#1095#1077#1085#1080#1077' '#1082' '#1083#1086#1082#1072#1083#1100#1085#1086#1081' '#1057#1059#1041#1044
@@ -64,6 +64,15 @@ object GlavnoeMeny: TGlavnoeMeny
     ParentFont = False
     TabOrder = 4
     OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 184
+    Top = 240
+    Width = 273
+    Height = 33
+    Caption = #1047#1072#1087#1088#1086#1089' '#1087#1086' '#1041#1044
+    TabOrder = 5
+    OnClick = Button6Click
   end
   object MainMenu1: TMainMenu
     Left = 40
