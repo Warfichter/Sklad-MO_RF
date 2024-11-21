@@ -36,7 +36,7 @@ object Form7: TForm7
     TitleFont.Style = []
   end
   object edit1: TEdit
-    Left = 248
+    Left = 232
     Top = 48
     Width = 169
     Height = 21
