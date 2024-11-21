@@ -34,6 +34,13 @@ object Form2: TForm2
     Height = 13
     Caption = #1062#1077#1085#1072
   end
+  object Label4: TLabel
+    Left = 88
+    Top = 400
+    Width = 61
+    Height = 13
+    Caption = #1054#1055#1048#1057#1040#1053#1048#1045
+  end
   object DBGrid1: TDBGrid
     Left = 80
     Top = 136
@@ -108,10 +115,10 @@ object Form2: TForm2
     TabOrder = 4
   end
   object DBMemo1: TDBMemo
-    Left = 72
+    Left = 152
     Top = 384
-    Width = 281
-    Height = 57
+    Width = 201
+    Height = 33
     DataField = 'tovar'
     DataSource = DataSource1
     TabOrder = 5
