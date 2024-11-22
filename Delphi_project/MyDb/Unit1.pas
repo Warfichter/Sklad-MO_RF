@@ -7,7 +7,7 @@ uses
   Dialogs, StdCtrls, Menus;
 
 type
-  TGlavnoeMeny = class(TForm)
+  TMainForm = class(TForm)
     Button1: TButton;
     Button2: TButton;
     MainMenu1: TMainMenu;
@@ -42,7 +42,7 @@ type
   end;
 
 var
-  GlavnoeMeny: TGlavnoeMeny;
+  MainForm: TMainForm;
 
 implementation
 
@@ -50,47 +50,47 @@ uses Unit2, prichod, Unit5, Unit4, Unit6, Unit7;
 
 {$R *.dfm}
 
-procedure TGlavnoeMeny.Button1Click(Sender: TObject);
+procedure TMainForm.Button1Click(Sender: TObject);
 begin
 form2.Show();
 end;
 
-procedure TGlavnoeMeny.N6Click(Sender: TObject);
+procedure TMainForm.N6Click(Sender: TObject);
 begin
 form2.Show();
 end;
 
-procedure TGlavnoeMeny.Button4Click(Sender: TObject);
+procedure TMainForm.Button4Click(Sender: TObject);
 begin
-form3.Show()
+RegForm.Show()
 end;
 
-procedure TGlavnoeMeny.Button3Click(Sender: TObject);
-begin
-PrichodForm.Show();
-end;
-
-procedure TGlavnoeMeny.Button2Click(Sender: TObject);
-begin
-PostavForm.Show();
-end;
-
-procedure TGlavnoeMeny.N7Click(Sender: TObject);
-begin
-PostavForm.Show();
-end;
-
-procedure TGlavnoeMeny.N8Click(Sender: TObject);
+procedure TMainForm.Button3Click(Sender: TObject);
 begin
 PrichodForm.Show();
 end;
 
-procedure TGlavnoeMeny.Button5Click(Sender: TObject);
+procedure TMainForm.Button2Click(Sender: TObject);
+begin
+PostavForm.Show();
+end;
+
+procedure TMainForm.N7Click(Sender: TObject);
+begin
+PostavForm.Show();
+end;
+
+procedure TMainForm.N8Click(Sender: TObject);
+begin
+PrichodForm.Show();
+end;
+
+procedure TMainForm.Button5Click(Sender: TObject);
 begin
 form6.Show();
 end;
 
-procedure TGlavnoeMeny.Button6Click(Sender: TObject);
+procedure TMainForm.Button6Click(Sender: TObject);
 begin
 form7.Show();
 end;

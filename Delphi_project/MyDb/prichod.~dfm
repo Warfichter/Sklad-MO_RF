@@ -1,9 +1,9 @@
-object Form3: TForm3
+object RegForm: TRegForm
   Left = 415
   Top = 176
   Width = 507
   Height = 378
-  Caption = 'Form3'
+  Caption = #1042#1093#1086#1076' '#1074' '#1089#1080#1089#1090#1077#1084#1091
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -47,7 +47,7 @@ object Form3: TForm3
     Top = 224
     Width = 137
     Height = 33
-    Caption = #1042#1086#1081#1090#1080
+    Caption = #1042#1093#1086#1076' '#1074' '#1089#1080#1089#1090#1077#1084#1091
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clHighlight
     Font.Height = -13
@@ -55,6 +55,7 @@ object Form3: TForm3
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    OnClick = Button1Click
   end
   object Edit1: TEdit
     Left = 160
@@ -67,8 +68,9 @@ object Form3: TForm3
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
+    PasswordChar = #3
     TabOrder = 1
-    Text = '*********'
+    Text = '12345'
   end
   object Login: TEdit
     Left = 160
@@ -82,7 +84,7 @@ object Form3: TForm3
     Font.Style = []
     ParentFont = False
     TabOrder = 2
-    Text = 'Login'
+    Text = 'User'
   end
   object MainMenu1: TMainMenu
     Left = 16

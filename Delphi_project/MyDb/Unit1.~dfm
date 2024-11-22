@@ -1,9 +1,9 @@
-object GlavnoeMeny: TGlavnoeMeny
+object MainForm: TMainForm
   Left = 324
   Top = 202
   Width = 673
   Height = 470
-  Caption = 'GlavnoeMeny'
+  Caption = #1043#1083#1072#1074#1085#1072#1103' '#1092#1086#1088#1084#1072
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clRed

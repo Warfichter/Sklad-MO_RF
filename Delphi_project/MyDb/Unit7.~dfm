@@ -64,16 +64,16 @@ object Form7: TForm7
   object edit1: TEdit
     Left = 232
     Top = 48
-    Width = 169
+    Width = 193
     Height = 21
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clScrollBar
+    Font.Color = clInfoText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
     TabOrder = 2
-    Text = #1074#1074#1077#1076#1080#1090#1077' '#1073#1091#1082#1074#1091
+    Text = #1074#1074#1077#1076#1080#1090#1077' '#1087#1077#1088#1074#1091#1102' '#1073#1091#1082#1074#1091' '#1074' '#1085#1072#1079#1074#1072#1085#1080#1080
   end
   object Button2: TButton
     Left = 656

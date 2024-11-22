@@ -58,6 +58,7 @@ object Form7: TForm7
         Expanded = False
         FieldName = 'zena'
         Title.Caption = #1062#1077#1085#1072
+        Width = 201
         Visible = True
       end>
   end

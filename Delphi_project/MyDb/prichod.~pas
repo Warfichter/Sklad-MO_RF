@@ -7,7 +7,7 @@ uses
   Dialogs, StdCtrls, Menus;
 
 type
-  TForm3 = class(TForm)
+  TRegForm = class(TForm)
     MainMenu1: TMainMenu;
     N1: TMenuItem;
     N4: TMenuItem;
@@ -28,6 +28,7 @@ type
     Label2: TLabel;
     Label3: TLabel;
     procedure N12Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,7 +36,7 @@ type
   end;
 
 var
-  Form3: TForm3;
+  RegForm: TRegForm;
 
 implementation
 
@@ -43,9 +44,23 @@ uses Unit1;
 
 {$R *.dfm}
 
-procedure TForm3.N12Click(Sender: TObject);
+procedure TRegForm.N12Click(Sender: TObject);
 begin
-GlavnoeMeny.Show();
+   MainForm.Show();
+end;
+
+procedure TRegForm.Button1Click(Sender: TObject);
+begin
+begin
+  if (Login.Text =  'user') and (Edit1.Text =  '12345') then
+   begin
+        showmessage('Успешная вторизация');
+        regform.Hide();
+        MainForm.show()
+      end;
+end;
+
+
 end;
 
 end.
