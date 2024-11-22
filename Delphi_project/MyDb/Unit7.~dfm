@@ -1,6 +1,6 @@
 object Form7: TForm7
-  Left = 258
-  Top = 225
+  Left = 231
+  Top = 158
   Width = 870
   Height = 500
   Caption = 'Form7'
@@ -13,6 +13,13 @@ object Form7: TForm7
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 104
+    Top = 56
+    Width = 118
+    Height = 13
+    Caption = #1055#1086#1080#1089#1082' '#1087#1086' '#1087#1077#1088#1074#1086#1081' '#1073#1091#1082#1074#1077
+  end
   object Button1: TButton
     Left = 456
     Top = 32
@@ -34,14 +41,39 @@ object Form7: TForm7
     TitleFont.Height = -11
     TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'tovar'
+        Title.Caption = #1058#1086#1074#1072#1088
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'edizm'
+        Title.Caption = #1045#1076#1080#1085#1080#1094#1074' '#1080#1079#1084#1077#1088#1077#1085#1080#1103
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'zena'
+        Title.Caption = #1062#1077#1085#1072
+        Visible = True
+      end>
   end
   object edit1: TEdit
     Left = 232
     Top = 48
     Width = 169
     Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clScrollBar
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
-    Text = 'edit1'
+    Text = #1074#1074#1077#1076#1080#1090#1077' '#1073#1091#1082#1074#1091
   end
   object Button2: TButton
     Left = 656
@@ -59,8 +91,8 @@ object Form7: TForm7
       'SELECT * FROM fedorov_tovar WHERE tovar LIKE :par1;'
       ''
       '')
-    Left = 104
-    Top = 40
+    Left = 112
+    Top = 8
     ParamData = <
       item
         DataType = ftString
@@ -70,8 +102,8 @@ object Form7: TForm7
   end
   object DataSource1: TDataSource
     DataSet = MySQLQuery1
-    Left = 152
-    Top = 40
+    Left = 160
+    Top = 8
   end
   object MySQLDatabase1: TMySQLDatabase
     Connected = True
@@ -90,8 +122,8 @@ object Form7: TForm7
       'Host=91.219.194.4')
     SSLProperties.TLSVersion = tlsAuto
     DatasetOptions = []
-    Left = 48
-    Top = 40
+    Left = 56
+    Top = 8
   end
   object frxReport1: TfrxReport
     DotMatrixReport = False
@@ -3509,6 +3541,17 @@ object Form7: TForm7
       'zena=zena')
     DataSource = DataSource1
     Left = 744
+    Top = 96
+  end
+  object frxPDFExport1: TfrxPDFExport
+    PrintOptimized = False
+    Outline = False
+    Author = 'FastReport'#174
+    Subject = 'FastReport'#174' PDF export'
+    Background = False
+    Creator = 'FastReport'#174' (http://www.fast-report.com)'
+    HTMLTags = True
+    Left = 784
     Top = 96
   end
 end

@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 234
-  Top = 165
+  Left = 415
+  Top = 176
   Width = 507
   Height = 378
   Caption = 'Form3'
@@ -18,7 +18,7 @@ object Form3: TForm3
     Left = 72
     Top = 56
     Width = 346
-    Height = 36
+    Height = 28
     HelpType = htKeyword
     Caption = #1044#1083#1103' '#1074#1093#1086#1076#1072'  '#1087#1088#1086#1081#1076#1080#1090#1077' '#1072#1074#1090#1086#1088#1080#1079#1072#1094#1080#1102
     Font.Charset = RUSSIAN_CHARSET
@@ -74,7 +74,7 @@ object Form3: TForm3
     Left = 160
     Top = 120
     Width = 177
-    Height = 33
+    Height = 21
     Font.Charset = DEFAULT_CHARSET
     Font.Color = cl3DDkShadow
     Font.Height = -11

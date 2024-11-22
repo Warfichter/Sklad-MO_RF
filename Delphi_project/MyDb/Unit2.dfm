@@ -40,6 +40,12 @@ object Form2: TForm2
     Width = 61
     Height = 13
     Caption = #1054#1055#1048#1057#1040#1053#1048#1045
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
   end
   object DBGrid1: TDBGrid
     Left = 80
@@ -56,26 +62,23 @@ object Form2: TForm2
     Columns = <
       item
         Expanded = False
-        FieldName = 'idTovar'
-        Width = 57
-        Visible = True
-      end
-      item
-        Expanded = False
         FieldName = 'tovar'
-        Width = 398
+        Title.Caption = #1058#1086#1074#1072#1088
+        Width = 381
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'edizm'
+        Title.Caption = #1045#1076#1080#1085#1080#1094#1072' '#1080#1079#1084#1077#1088#1077#1085#1080#1103
         Width = 148
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'zena'
-        Width = 120
+        Title.Caption = #1062#1077#1085#1072
+        Width = 171
         Visible = True
       end>
   end
@@ -116,9 +119,9 @@ object Form2: TForm2
   end
   object DBMemo1: TDBMemo
     Left = 152
-    Top = 384
+    Top = 392
     Width = 201
-    Height = 33
+    Height = 25
     DataField = 'tovar'
     DataSource = DataSource1
     TabOrder = 5

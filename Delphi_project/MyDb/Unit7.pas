@@ -19,6 +19,7 @@ type
     frxDBDataset1: TfrxDBDataset;
     frxReport1: TfrxReport;
     frxPDFExport1: TfrxPDFExport;
+    Label1: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
