@@ -1,6 +1,6 @@
 object RegForm: TRegForm
-  Left = 422
-  Top = 311
+  Left = 430
+  Top = 263
   Width = 507
   Height = 378
   Caption = #1042#1093#1086#1076' '#1074' '#1089#1080#1089#1090#1077#1084#1091
@@ -84,7 +84,7 @@ object RegForm: TRegForm
     Font.Style = []
     ParentFont = False
     TabOrder = 2
-    Text = 'User'
+    Text = 'user'
   end
   object MainMenu1: TMainMenu
     Left = 16
