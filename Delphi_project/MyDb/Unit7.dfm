@@ -3511,4 +3511,15 @@ object Form7: TForm7
     Left = 744
     Top = 96
   end
+  object frxPDFExport1: TfrxPDFExport
+    PrintOptimized = False
+    Outline = False
+    Author = 'FastReport'#174
+    Subject = 'FastReport'#174' PDF export'
+    Background = False
+    Creator = 'FastReport'#174' (http://www.fast-report.com)'
+    HTMLTags = True
+    Left = 784
+    Top = 96
+  end
 end

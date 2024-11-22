@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, mySQLDbTables, Grids, DBGrids, StdCtrls, frxClass, frxDBSet;
+  Dialogs, DB, mySQLDbTables, Grids, DBGrids, StdCtrls, frxClass, frxDBSet,
+  frxExportPDF;
 
 type
   TForm7 = class(TForm)
@@ -17,6 +18,7 @@ type
     Button2: TButton;
     frxDBDataset1: TfrxDBDataset;
     frxReport1: TfrxReport;
+    frxPDFExport1: TfrxPDFExport;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private

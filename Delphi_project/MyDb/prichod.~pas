@@ -24,6 +24,9 @@ type
     Label1: TLabel;
     Button1: TButton;
     Edit1: TEdit;
+    Login: TEdit;
+    Label2: TLabel;
+    Label3: TLabel;
     procedure N12Click(Sender: TObject);
   private
     { Private declarations }
