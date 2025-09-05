@@ -1,0 +1,109 @@
+object Form5: TForm5
+  Left = 246
+  Top = 156
+  Width = 928
+  Height = 447
+  Caption = 'Form5'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBNavigator1: TDBNavigator
+    Left = 56
+    Top = 304
+    Width = 790
+    Height = 49
+    DataSource = DataSource5
+    TabOrder = 0
+  end
+  object DBEdit1: TDBEdit
+    Left = 192
+    Top = 32
+    Width = 209
+    Height = 21
+    DataField = 'user_rank'
+    DataSource = DataSource5
+    TabOrder = 1
+  end
+  object DBGrid1: TDBGrid
+    Left = 47
+    Top = 144
+    Width = 794
+    Height = 145
+    DataSource = DataSource5
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'user_rank'
+        Width = 360
+        Visible = True
+      end>
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 192
+    Top = 64
+    Width = 209
+    Height = 21
+    DataField = 'fio'
+    DataSource = DataSource1
+    TabOrder = 3
+  end
+  object ADOTable5: TADOTable
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Fedorov_user_rank'
+    Left = 80
+    Top = 24
+    object ADOTable5id: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOTable5user_rank: TStringField
+      FieldName = 'user_rank'
+      Size = 255
+    end
+    object ADOTable5fio: TStringField
+      FieldKind = fkLookup
+      FieldName = 'fio'
+      LookupKeyFields = 'Responsible_ID'
+      LookupResultField = 'Responsible_Name'
+      KeyFields = 'id'
+      Lookup = True
+    end
+  end
+  object DataSource5: TDataSource
+    AutoEdit = False
+    DataSet = ADOTable5
+    Left = 128
+    Top = 24
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=666'
+    Left = 40
+    Top = 24
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable5
+    Left = 128
+    Top = 64
+  end
+  object ADOQuery1: TADOQuery
+    ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=666'
+    DataSource = DataSource5
+    Parameters = <>
+    Left = 80
+    Top = 64
+  end
+end
