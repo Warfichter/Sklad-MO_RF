@@ -48,6 +48,9 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure FindByPhoneButtonClick(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+    procedure N9Click(Sender: TObject);
+    procedure N3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,7 +63,7 @@ var
 
 implementation
 
-uses Unit2, Sys, Otvetst, Unit4, Unit3;
+uses Unit2, Sys, Otvetst, Unit4, Unit3, Unit7, Unit8;
 
 {$R *.dfm}
 
@@ -113,6 +116,21 @@ end;
 procedure TMainForm.FindByPhoneButtonClick(Sender: TObject);
 begin
 Form2.ShowModal;
+end;
+
+procedure TMainForm.N2Click(Sender: TObject);
+begin
+  MainForm.close;
+end;
+
+procedure TMainForm.N9Click(Sender: TObject);
+begin
+  Form7.showModal();
+end;
+
+procedure TMainForm.N3Click(Sender: TObject);
+begin
+   Form8.showModal();
 end;
 
 end.

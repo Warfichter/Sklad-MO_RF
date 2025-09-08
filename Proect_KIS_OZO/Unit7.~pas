@@ -1,0 +1,40 @@
+unit Unit7;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, ADODB, DBCtrls, Grids, DBGrids, ExtCtrls, StdCtrls;
+
+type
+  TForm7 = class(TForm)
+    DBNavigator1: TDBNavigator;
+    DBGrid1: TDBGrid;
+    DataSource1: TDataSource;
+    ADOConnection1: TADOConnection;
+    ADOTable1: TADOTable;
+    ADOTable2: TADOTable;
+    DataSource2: TDataSource;
+    ADOTable1Responsible_ID: TAutoIncField;
+    ADOTable1Responsible_Name: TStringField;
+    ADOTable1Responsible_Position: TStringField;
+    ADOTable1Responsible_Phone: TStringField;
+    ADOTable2id: TAutoIncField;
+    ADOTable2user_rank: TStringField;
+    ADOTable1Field: TStringField;
+    ADOTable1Unit_ID: TIntegerField;
+    ADOTable1id: TIntegerField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form7: TForm7;
+
+implementation
+
+{$R *.dfm}
+
+end.

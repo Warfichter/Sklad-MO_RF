@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 370
-  Top = 332
-  Width = 1253
+  Left = 75
+  Top = 161
+  Width = 1204
   Height = 706
   Caption = 'MainForm'
   Color = clBtnFace
@@ -89,6 +89,7 @@ object MainForm: TMainForm
       end
       object N2: TMenuItem
         Caption = #1042#1099#1093#1086#1076
+        OnClick = N2Click
       end
     end
     object N7: TMenuItem
@@ -98,6 +99,7 @@ object MainForm: TMainForm
       end
       object N9: TMenuItem
         Caption = #1047#1074#1072#1085#1080#1077' '
+        OnClick = N9Click
       end
       object N10: TMenuItem
         Caption = #1056#1072#1079#1084#1077#1088
@@ -135,6 +137,7 @@ object MainForm: TMainForm
       Caption = #1057#1087#1088#1072#1074#1082#1072
       object N3: TMenuItem
         Caption = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077
+        OnClick = N3Click
       end
       object N4: TMenuItem
         Caption = #1056#1091#1082#1086#1074#1086#1076#1089#1090#1074#1086

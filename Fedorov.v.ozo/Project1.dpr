@@ -4,22 +4,28 @@ uses
   Forms,
   Unit1 in 'Unit1.pas' {MainForm},
   Unit2 in 'Unit2.pas' {Form2},
-  prichod in 'prichod.pas' {RegForm},
-  Unit4 in 'Unit4.pas' {PostavForm},
-  Unit5 in 'Unit5.pas' {PrichodForm},
-  Unit6 in 'Unit6.pas' {Form6},
-  Unit7 in 'Unit7.pas' {Form7};
+  Sys in 'Sys.pas' {SysForm},
+  Auth in 'Auth.pas' {AuthForm},
+  Otvetst in 'Otvetst.pas' {OtvetstForm},
+  Unit3 in 'Unit3.pas' {Form3},
+  Unit4 in 'Unit4.pas' {FormZajav},
+  Unit6 in 'Unit6.pas' {Form5},
+  Unit7 in 'Unit7.pas' {Form7},
+  Unit8 in 'Unit8.pas' {Form8};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TRegForm, RegForm);
+  Application.CreateForm(TAuthForm, AuthForm);
+  Application.CreateForm(TFormZajav, FormZajav);
   Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TSysForm, SysForm);
   Application.CreateForm(TForm2, Form2);
-  Application.CreateForm(TPostavForm, PostavForm);
-  Application.CreateForm(TPrichodForm, PrichodForm);
-  Application.CreateForm(TForm6, Form6);
+  Application.CreateForm(TOtvetstForm, OtvetstForm);
+  Application.CreateForm(TForm5, Form5);
   Application.CreateForm(TForm7, Form7);
+  Application.CreateForm(TForm8, Form8);
   Application.Run;
 end.

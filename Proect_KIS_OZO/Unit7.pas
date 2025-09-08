@@ -4,27 +4,38 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DBCtrls, StdCtrls, Grids, DBGrids, DB, ExtCtrls, ADODB;
+  Dialogs, DB, ADODB, DBCtrls, Grids, DBGrids, ExtCtrls, StdCtrls,
+  frxClass, frxDBSet, Menus;
 
 type
   TForm7 = class(TForm)
-    ADOTable1: TADOTable;
-    ADOConnection1: TADOConnection;
     DBNavigator1: TDBNavigator;
-    DataSource1: TDataSource;
-    ADOTable2: TADOTable;
-    ADOConnection2: TADOConnection;
-    DataSource2: TDataSource;
-    ADOTable1id: TAutoIncField;
-    ADOTable1user_rank: TStringField;
-    ADOTable2id: TAutoIncField;
-    ADOTable2name: TStringField;
-    ADOTable2address: TStringField;
-    ADOTable2responsible_person_id: TIntegerField;
-    ADOTable2Field: TStringField;
     DBGrid1: TDBGrid;
+    DataSource1: TDataSource;
+    ADOConnection1: TADOConnection;
+    ADOTable1: TADOTable;
+    ADOTable2: TADOTable;
+    DataSource2: TDataSource;
+    ADOTable1Responsible_ID: TAutoIncField;
+    ADOTable1Responsible_Name: TStringField;
+    ADOTable1Responsible_Position: TStringField;
+    ADOTable1Responsible_Phone: TStringField;
+    ADOTable2id: TAutoIncField;
+    ADOTable2user_rank: TStringField;
+    ADOTable1Field: TStringField;
+    ADOTable1Unit_ID: TIntegerField;
+    ADOTable1id: TIntegerField;
+    PopupMenu1: TPopupMenu;
+    N1: TMenuItem;
     Label1: TLabel;
-    DBLookupComboBox1: TDBLookupComboBox;
+    Label2: TLabel;
+    Button1: TButton;
+    FindEdit: TEdit;
+    frxDBDataset2: TfrxDBDataset;
+    frxReport2: TfrxReport;
+    ADOQuery1: TADOQuery;
+    DataSource3: TDataSource;
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,5 +48,12 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm7.Button1Click(Sender: TObject);
+begin
+ADOQuery1.Active :=false;
+ADOQuery1.Parameters.ParamByName('Responsible_Name').Value := '%' + FindEdit.text+ '%';
+ADOQuery1.Active :=true;
+ end;
 
 end.

@@ -4,16 +4,22 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, DBCtrls, Grids, DBGrids, DB, ADODB, StdCtrls;
+  Dialogs, DBCtrls, DB, ADODB, Grids, DBGrids, StdCtrls, Mask, ExtCtrls;
 
 type
-  TForm6 = class(TForm)
-    ADOConnection1: TADOConnection;
-    ADOTable1: TADOTable;
-    DataSource1: TDataSource;
-    DBGrid1: TDBGrid;
+  TForm5 = class(TForm)
     DBNavigator1: TDBNavigator;
-    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    DBGrid1: TDBGrid;
+    ADOTable5: TADOTable;
+    DataSource5: TDataSource;
+    ADOConnection1: TADOConnection;
+    ADOTable5id: TAutoIncField;
+    ADOTable5user_rank: TStringField;
+    DataSource1: TDataSource;
+    DBLookupComboBox1: TDBLookupComboBox;
+    ADOTable5fio: TStringField;
+    ADOQuery1: TADOQuery;
   private
     { Private declarations }
   public
@@ -21,7 +27,7 @@ type
   end;
 
 var
-  Form6: TForm6;
+  Form5: TForm5;
 
 implementation
 

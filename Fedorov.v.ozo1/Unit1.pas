@@ -1,0 +1,118 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Menus, DB, ADODB, ExtCtrls, StdCtrls, sSkinProvider,
+  sSkinManager;
+
+type
+  TMainForm = class(TForm)
+    MainMenu1: TMainMenu;
+    f1: TMenuItem;
+    f2: TMenuItem;
+    f3: TMenuItem;
+    g1: TMenuItem;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    N4: TMenuItem;
+    N5: TMenuItem;
+    N6: TMenuItem;
+    R1: TMenuItem;
+    ADOConnection1: TADOConnection;
+    Image1: TImage;
+    StaticText1: TStaticText;
+    N7: TMenuItem;
+    N8: TMenuItem;
+    N9: TMenuItem;
+    N10: TMenuItem;
+    N11: TMenuItem;
+    N12: TMenuItem;
+    Button1: TButton;
+    Button2: TButton;
+    N13: TMenuItem;
+    Image2: TImage;
+    Button4: TButton;
+    FindByPhoneButton: TButton;
+    sSkinManager1: TsSkinManager;
+    sSkinProvider1: TsSkinProvider;
+    procedure g1Click(Sender: TObject);
+    procedure R1Click(Sender: TObject);
+    procedure N5Click(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure N6Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure FindByPhoneButtonClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    pathGlobal,userStr,operatorSys:string;
+  end;
+
+var
+  MainForm: TMainForm;
+
+implementation
+
+uses Unit2, Sys, Otvetst, Unit4, Unit3;
+
+{$R *.dfm}
+
+procedure TMainForm.g1Click(Sender: TObject);
+begin
+Form2.Showmodal();
+end;
+
+procedure TMainForm.R1Click(Sender: TObject);
+begin
+SysForm.Showmodal();
+end;
+
+procedure TMainForm.N5Click(Sender: TObject);
+begin
+Form3.Showmodal();
+end;
+
+procedure TMainForm.Image1Click(Sender: TObject);
+begin
+  // ”казываем путь к изображению и загружаем его в компонент TImage
+
+end;
+
+procedure TMainForm.FormCreate(Sender: TObject);
+begin
+Image1.Picture.LoadFromFile('11.jpg');
+end;
+
+procedure TMainForm.N6Click(Sender: TObject);
+begin
+FormZajav.showmodal();
+end;
+
+procedure TMainForm.Button2Click(Sender: TObject);
+begin
+FormZajav.ShowModal();
+end;
+
+procedure TMainForm.Button1Click(Sender: TObject);
+begin
+Form3.showModal();
+end;
+
+procedure TMainForm.Button4Click(Sender: TObject);
+begin
+SysForm.ShowModal();
+end;
+
+procedure TMainForm.FindByPhoneButtonClick(Sender: TObject);
+begin
+Form2.ShowModal;
+end;
+
+end.
