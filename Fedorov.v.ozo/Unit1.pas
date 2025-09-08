@@ -14,7 +14,6 @@ type
     f2: TMenuItem;
     f3: TMenuItem;
     g1: TMenuItem;
-    N1: TMenuItem;
     N2: TMenuItem;
     N3: TMenuItem;
     N4: TMenuItem;
@@ -51,6 +50,8 @@ type
     procedure N2Click(Sender: TObject);
     procedure N9Click(Sender: TObject);
     procedure N3Click(Sender: TObject);
+    procedure N11Click(Sender: TObject);
+    procedure N13Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,7 +64,7 @@ var
 
 implementation
 
-uses Unit2, Sys, Otvetst, Unit4, Unit3, Unit7, Unit8;
+uses Unit2, Sys, Otvetst, Unit4, Unit3, Unit7, Unit8, Unit9, Unit10;
 
 {$R *.dfm}
 
@@ -131,6 +132,16 @@ end;
 procedure TMainForm.N3Click(Sender: TObject);
 begin
    Form8.showModal();
+end;
+
+procedure TMainForm.N11Click(Sender: TObject);
+begin
+   Form9.showModal();
+end;
+
+procedure TMainForm.N13Click(Sender: TObject);
+begin
+   Form10.showModal();
 end;
 
 end.

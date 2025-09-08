@@ -1,9 +1,9 @@
 object Form8: TForm8
-  Left = 335
-  Top = 184
+  Left = 265
+  Top = 124
   Width = 928
   Height = 480
-  Caption = 'Form8'
+  Caption = #1048#1085#1092#1086#1088#1084#1072#1094#1080#1103' '#1086' '#1087#1088#1086#1075#1088#1072#1084#1084#1077
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,7 +15,7 @@ object Form8: TForm8
   TextHeight = 13
   object Memo1: TMemo
     Left = 16
-    Top = 8
+    Top = 0
     Width = 857
     Height = 377
     Lines.Strings = (
