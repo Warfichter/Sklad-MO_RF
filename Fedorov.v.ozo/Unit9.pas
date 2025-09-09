@@ -26,13 +26,14 @@ type
     ADOQuery1Responsible_Phone: TStringField;
     ADOQuery1Unit_ID: TIntegerField;
     ADOQuery1id: TIntegerField;
+    DataSource1: TDataSource;
+    ADOTable1: TADOTable;
+    ADOTable1Field: TIntegerField;
+    ADOTable1Field2: TIntegerField;
     DBGrid1: TDBGrid;
-    ADOTable3id: TAutoIncField;
-    ADOTable3price: TBCDField;
-    ADOTable3id_item: TIntegerField;
-    ADOTable3id_itemsize: TIntegerField;
-    ADOTable3count: TIntegerField;
-    ADOTable3datep: TDateTimeField;
+    ADOTable1id: TAutoIncField;
+    ADOTable1name: TStringField;
+    ADOTable1id_manufacture: TIntegerField;
   private
     { Private declarations }
   public

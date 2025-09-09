@@ -1,8 +1,8 @@
 object MainForm: TMainForm
-  Left = 281
-  Top = 652
-  Width = 1204
-  Height = 706
+  Left = 249
+  Top = 62
+  Width = 936
+  Height = 657
   Caption = 'MainForm'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -25,14 +25,14 @@ object MainForm: TMainForm
   object Image2: TImage
     Left = -193
     Top = 34
-    Width = 1297
+    Width = 1074
     Height = 537
     OnClick = Image1Click
   end
   object StaticText1: TStaticText
-    Left = 472
-    Top = 32
-    Width = 748
+    Left = 256
+    Top = 40
+    Width = 545
     Height = 36
     Caption = #1042#1099#1076#1072#1095#1072' '#1074#1077#1097#1077#1074#1086#1075#1086' '#1080#1084#1091#1097#1077#1089#1090#1074#1072' '#13#10#1080#1084#1091#1097#1077#1089#1090#1074#1072' '#1074#1086#1080#1085#1089#1082#1086#1081' '#1095#1072#1089#1090#1080
     Font.Charset = DEFAULT_CHARSET
@@ -137,9 +137,6 @@ object MainForm: TMainForm
       object N3: TMenuItem
         Caption = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077
         OnClick = N3Click
-      end
-      object N4: TMenuItem
-        Caption = #1056#1091#1082#1086#1074#1086#1076#1089#1090#1074#1086
       end
     end
   end

@@ -64,7 +64,7 @@ var
 
 implementation
 
-uses Unit2, Sys, Otvetst, Unit4, Unit3, Unit7, Unit8, Unit9;
+uses Unit2, Sys, Otvetst, Unit4, Unit3, Unit7, Unit8, Unit9, Unit10;
 
 {$R *.dfm}
 
