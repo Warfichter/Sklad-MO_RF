@@ -49,10 +49,10 @@ type
     Edit1: TEdit;
     Label6: TLabel;
     frxRichObject1: TfrxRichObject;
-    frxReport1: TfrxReport;
     Label7: TLabel;
     Edit2: TEdit;
     Button1: TButton;
+    frxReport1: TfrxReport;
     procedure G1Click(Sender: TObject);
   private
     { Private declarations }

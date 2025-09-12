@@ -51,6 +51,8 @@ type
     procedure N3Click(Sender: TObject);
     procedure N11Click(Sender: TObject);
     procedure N13Click(Sender: TObject);
+    procedure N8Click(Sender: TObject);
+    procedure N10Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,7 +65,7 @@ var
 
 implementation
 
-uses Unit2, Sys, Otvetst, Unit4, Unit3, Unit7, Unit8, Unit9, Unit10;
+uses Unit2, Sys, Otvetst, Unit4, Unit3, Unit7, Unit8, Unit9, Unit10, Unit6;
 
 {$R *.dfm}
 
@@ -141,6 +143,16 @@ end;
 procedure TMainForm.N13Click(Sender: TObject);
 begin
    Form10.showModal();
+end;
+
+procedure TMainForm.N8Click(Sender: TObject);
+begin
+  Form5.show();
+end;
+
+procedure TMainForm.N10Click(Sender: TObject);
+begin
+   OtvetstForm.showModal();
 end;
 
 end.

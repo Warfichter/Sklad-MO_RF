@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 249
-  Top = 62
-  Width = 936
+  Left = 263
+  Top = 58
+  Width = 1013
   Height = 657
   Caption = 'MainForm'
   Color = clBtnFace
@@ -32,7 +32,7 @@ object MainForm: TMainForm
   object StaticText1: TStaticText
     Left = 256
     Top = 40
-    Width = 545
+    Width = 748
     Height = 36
     Caption = #1042#1099#1076#1072#1095#1072' '#1074#1077#1097#1077#1074#1086#1075#1086' '#1080#1084#1091#1097#1077#1089#1090#1074#1072' '#13#10#1080#1084#1091#1097#1077#1089#1090#1074#1072' '#1074#1086#1080#1085#1089#1082#1086#1081' '#1095#1072#1089#1090#1080
     Font.Charset = DEFAULT_CHARSET
@@ -93,6 +93,7 @@ object MainForm: TMainForm
       Caption = #1050#1072#1090#1072#1083#1086#1075
       object N8: TMenuItem
         Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1100
+        OnClick = N8Click
       end
       object N9: TMenuItem
         Caption = #1047#1074#1072#1085#1080#1077' '
@@ -100,6 +101,7 @@ object MainForm: TMainForm
       end
       object N10: TMenuItem
         Caption = #1056#1072#1079#1084#1077#1088
+        OnClick = N10Click
       end
       object N11: TMenuItem
         Caption = #1044#1074#1080#1078#1077#1085#1080#1077' '#1080#1084#1091#1097#1077#1089#1090#1074#1072
@@ -149,7 +151,6 @@ object MainForm: TMainForm
   end
   object sSkinManager1: TsSkinManager
     ButtonsOptions.OldGlyphsMode = False
-    IsDefault = False
     InternalSkins = <
       item
         Name = 'Deep (internal)'

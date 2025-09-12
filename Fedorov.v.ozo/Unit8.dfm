@@ -11,6 +11,9 @@ object Form8: TForm8
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnClick = FormShow
+  OnCreate = Button1Click
+  OnShow = Memo1Change
   PixelsPerInch = 96
   TextHeight = 13
   object Memo1: TMemo

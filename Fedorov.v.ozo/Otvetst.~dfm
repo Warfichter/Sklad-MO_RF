@@ -1,6 +1,6 @@
 object OtvetstForm: TOtvetstForm
-  Left = 311
-  Top = 464
+  Left = -135
+  Top = 154
   Width = 1382
   Height = 744
   Caption = 'OtvetstForm'
@@ -102,9 +102,7 @@ object OtvetstForm: TOtvetstForm
   end
   object ADOConnection1: TADOConnection
     Connected = True
-    ConnectionString = 
-      'Provider=MSDASQL.1;Persist Security Info=False;Data Source=Sklad' +
-      '_MO'
+    ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=666'
     LoginPrompt = False
     Left = 40
     Top = 72
@@ -190,6 +188,7 @@ object OtvetstForm: TOtvetstForm
     end
   end
   object ADOTable2: TADOTable
+    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'Warehouse_Fedorov'
@@ -453,6 +452,7 @@ object OtvetstForm: TOtvetstForm
     Top = 160
   end
   object ADOTable3: TADOTable
+    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'Responsible_Person_Fedorov'

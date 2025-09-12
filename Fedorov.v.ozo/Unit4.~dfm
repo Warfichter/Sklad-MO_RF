@@ -1,6 +1,6 @@
 object FormZajav: TFormZajav
-  Left = -8
-  Top = -8
+  Left = -81
+  Top = 194
   Width = 1382
   Height = 744
   Caption = 'FormZajav'
@@ -198,9 +198,7 @@ object FormZajav: TFormZajav
   end
   object ADOConnection1: TADOConnection
     Connected = True
-    ConnectionString = 
-      'Provider=MSDASQL.1;Persist Security Info=False;Data Source=Sklad' +
-      '_MO'
+    ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=666'
     Left = 8
   end
   object ADOTable1: TADOTable

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DBCtrls;  // Добавляем StdCtrls для TMemo
+  Dialogs, StdCtrls, DBCtrls;
 
 type
   TForm8 = class(TForm)
@@ -12,10 +12,9 @@ type
     Button1: TButton;
     procedure Memo1Change(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);  // Обработчик OnShow
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 var
@@ -27,10 +26,15 @@ uses Unit1;
 
 {$R *.dfm}
 
+procedure TForm8.FormShow(Sender: TObject);
+begin
+  Caption := 'для просмотра информации нажмите пробел';
+end;
+
 procedure TForm8.Memo1Change(Sender: TObject);
 begin
-   Memo1.Lines.Text :=
-   'О программе' + sLineBreak +
+  Memo1.Lines.Text :=
+    'О программе' + sLineBreak +
     'Данная программа предназначена для удобного управления складскими данными.' + sLineBreak +
     'Она позволяет выполнять поиск по складам и телефонам, фильтровать записи по первой букве, а также просматривать подробную информацию о каждом складе.' + sLineBreak +
     '' + sLineBreak +
@@ -48,10 +52,8 @@ end;
 
 procedure TForm8.Button1Click(Sender: TObject);
 begin
-Close;
-
+  Close;
 end;
 
 end.
-
 
