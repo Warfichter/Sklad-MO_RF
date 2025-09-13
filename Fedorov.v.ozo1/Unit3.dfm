@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 275
-  Top = 117
+  Left = 182
+  Top = 56
   Width = 911
   Height = 480
   Caption = 'FormZaz'
@@ -26,12 +26,14 @@ object Form3: TForm3
     Font.Style = []
     ParentFont = False
   end
-  object Edit1: TEdit
+  object FindEdit: TEdit
     Left = 304
     Top = 56
     Width = 241
     Height = 21
+    PopupMenu = PopupMenu1
     TabOrder = 0
+    Text = #1074#1074#1077#1076#1080#1090#1077' '#1089#1080#1084#1074#1086#1083
   end
   object DBGrid1: TDBGrid
     Left = 72
@@ -81,6 +83,7 @@ object Form3: TForm3
     Top = 376
     Width = 770
     Height = 25
+    DataSource = DataSource2
     TabOrder = 2
   end
   object Button1: TButton
@@ -90,6 +93,7 @@ object Form3: TForm3
     Height = 25
     Caption = #1055#1054#1048#1057#1050
     TabOrder = 3
+    OnClick = Button1Click
   end
   object ADOConnection1: TADOConnection
     Connected = True
@@ -104,6 +108,21 @@ object Form3: TForm3
     TableName = 'Warehouse_Fedorov'
     Left = 104
     Top = 16
+    object ADOTable1Warehouse_ID: TAutoIncField
+      FieldName = 'Warehouse_ID'
+      ReadOnly = True
+    end
+    object ADOTable1Warehouse_Name: TStringField
+      FieldName = 'Warehouse_Name'
+      Size = 100
+    end
+    object ADOTable1Warehouse_Address: TStringField
+      FieldName = 'Warehouse_Address'
+      Size = 255
+    end
+    object ADOTable1Warehouse_Phone: TStringField
+      FieldName = 'Warehouse_Phone'
+    end
   end
   object DataSource1: TDataSource
     DataSet = ADOTable1
@@ -388,19 +407,18 @@ object Form3: TForm3
     CursorType = ctStatic
     Parameters = <
       item
-        Name = 'fio'
-        DataType = ftString
-        Size = 1
-        Value = '%'
+        Name = 'phone'
+        Size = -1
+        Value = Null
       end>
     SQL.Strings = (
       'Select * from Warehouse_Fedorov where'
-      ' Warehouse_Name like :fio')
+      ' Warehouse_Phone LIKE :phone')
     Left = 280
     Top = 8
   end
   object DataSource2: TDataSource
-    DataSet = ADOTable1
+    DataSet = ADOQuery1
     Left = 320
     Top = 8
   end

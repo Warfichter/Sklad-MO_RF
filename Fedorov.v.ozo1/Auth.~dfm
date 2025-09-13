@@ -1,6 +1,6 @@
 object AuthForm: TAuthForm
-  Left = 501
-  Top = 247
+  Left = 314
+  Top = 149
   Width = 403
   Height = 310
   Caption = 'AuthForm'
@@ -63,11 +63,9 @@ object AuthForm: TAuthForm
     OnClick = Button2Click
   end
   object ADOConnection1: TADOConnection
-    ConnectionString = 
-      'Provider=MSDASQL.1;Persist Security Info=False;Data Source=Sklad' +
-      '_MO'
+    Connected = True
+    ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=666'
     LoginPrompt = False
-    Provider = 'MSDASQL.1'
     Left = 48
   end
   object ADOTable1: TADOTable

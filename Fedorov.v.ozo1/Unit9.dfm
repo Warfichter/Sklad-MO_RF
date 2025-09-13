@@ -1,0 +1,384 @@
+object Form9: TForm9
+  Left = 259
+  Top = 97
+  Width = 925
+  Height = 480
+  Caption = 'Form9'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 312
+    Top = 0
+    Width = 292
+    Height = 25
+    Caption = #1044#1074#1080#1078#1077#1085#1080#1077' '#1080#1084#1091#1097#1077#1089#1090#1074#1072' '#1089#1082#1083#1072#1076#1072
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsItalic]
+    ParentFont = False
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 120
+    Top = 384
+    Width = 680
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 680
+    Top = 40
+    Width = 201
+    Height = 41
+    Caption = #1053#1072#1095#1072#1090#1100' '#1087#1086#1080#1089#1082
+    TabOrder = 1
+  end
+  object FindEdit: TEdit
+    Left = 224
+    Top = 48
+    Width = 225
+    Height = 21
+    TabOrder = 2
+    Text = #1074#1074#1077#1076#1080#1090#1077' '#1090#1080#1087' '#1080#1084#1091#1097#1077#1089#1090#1074#1072
+  end
+  object DBGrid1: TDBGrid
+    Left = 104
+    Top = 144
+    Width = 729
+    Height = 225
+    DataSource = DataSource1
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Title.Caption = #8470' '#1087'/'#1087
+        Width = 109
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'name'
+        Title.Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077
+        Width = 118
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'id_manufacture'
+        Title.Caption = #1055#1088#1086#1080#1079#1074#1086#1076#1080#1090#1077#1083#1100
+        Width = 116
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = #1086#1089#1090#1072#1090#1086#1082' '#1085#1072' '#1089#1082#1083#1072#1076#1077
+        Width = 141
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = #1094#1077#1085#1072' '#1079#1072' '#1077#1076#1080#1085#1080#1094#1091
+        Width = 167
+        Visible = True
+      end>
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=666'
+    Left = 72
+    Top = 8
+  end
+  object frxDBDataset2: TfrxDBDataset
+    UserName = 'frxDBDataset1'
+    CloseDataSource = False
+    FieldAliases.Strings = (
+      'Unit_ID=Unit_ID'
+      'Unit_Number=Unit_Number'
+      'Unit_Name=Unit_Name'
+      'Unit_Address=Unit_Address'
+      'Unit_Phone=Unit_Phone'
+      'Warehouse_ID=Warehouse_ID')
+    DataSet = ADOQuery1
+    Left = 528
+    Top = 40
+  end
+  object frxReport2: TfrxReport
+    DataSet = frxDBDataset2
+    DataSetName = 'frxDBDataset1'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    ReportOptions.CreateDate = 45720.955424479200000000
+    ReportOptions.LastChange = 45729.480855833330000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 480
+    Top = 40
+    Datasets = <
+      item
+        DataSet = frxDBDataset2
+        DataSetName = 'frxDBDataset1'
+      end>
+    Variables = <>
+    Style = <
+      item
+        Name = 'Title'
+        Color = clNavy
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+      end
+      item
+        Name = 'Header'
+        Color = clNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clMaroon
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+      end
+      item
+        Name = 'Group header'
+        Color = 15790320
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+      end
+      item
+        Name = 'Data'
+        Color = clNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+      end
+      item
+        Name = 'Group footer'
+        Color = clNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+      end
+      item
+        Name = 'Header line'
+        Color = clNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Frame.Typ = [ftBottom]
+        Frame.Width = 2.000000000000000000
+      end>
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      object ReportTitle1: TfrxReportTitle
+        Height = 26.456710000000000000
+        Top = 18.897650000000000000
+        Width = 718.110700000000000000
+        object Memo1: TfrxMemoView
+          Align = baWidth
+          Width = 718.110700000000000000
+          Height = 22.677180000000000000
+          Color = clNavy
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWhite
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          HAlign = haCenter
+          Memo.Strings = (
+            #1057#1087#1080#1089#1086#1082' '#1090#1077#1083#1077#1092#1086#1085#1086#1074' '#1076#1086#1083#1078#1085#1086#1089#1090#1085#1099#1093' '#1083#1080#1094' ')
+          ParentFont = False
+          Style = 'Title'
+          VAlign = vaCenter
+        end
+      end
+      object PageHeader1: TfrxPageHeader
+        Height = 22.677180000000000000
+        Top = 68.031540000000000000
+        Width = 718.110700000000000000
+        object Memo2: TfrxMemoView
+          Width = 718.009448820000000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftBottom]
+          Frame.Width = 2.000000000000000000
+          ParentFont = False
+          Style = 'Header line'
+        end
+      end
+      object MasterData1: TfrxMasterData
+        Height = 18.897650000000000000
+        Top = 151.181200000000000000
+        Width = 718.110700000000000000
+        DataSet = frxDBDataset2
+        DataSetName = 'frxDBDataset1'
+        RowCount = 0
+      end
+      object PageFooter1: TfrxPageFooter
+        Height = 26.456710000000000000
+        Top = 230.551330000000000000
+        Width = 718.110700000000000000
+        object Memo11: TfrxMemoView
+          Align = baWidth
+          Width = 718.110700000000000000
+          Frame.Typ = [ftTop]
+          Frame.Width = 2.000000000000000000
+        end
+        object Memo12: TfrxMemoView
+          Top = 1.000000000000000000
+          Height = 22.677180000000000000
+          AutoWidth = True
+          Memo.Strings = (
+            '[Date] [Time]')
+        end
+        object Memo13: TfrxMemoView
+          Align = baRight
+          Left = 642.520100000000000000
+          Top = 1.000000000000000000
+          Width = 75.590600000000000000
+          Height = 22.677180000000000000
+          HAlign = haRight
+          Memo.Strings = (
+            'Page [Page#]')
+        end
+      end
+    end
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=666'
+    CursorType = ctStatic
+    Parameters = <
+      item
+        Name = 'phone'
+        DataType = ftString
+        Size = 1
+        Value = '%'
+      end>
+    SQL.Strings = (
+      'Select * from Responsible_Person_Fedorov where'
+      ' Responsible_Phone like :phone')
+    Left = 592
+    Top = 40
+    object ADOQuery1Responsible_ID: TAutoIncField
+      FieldName = 'Responsible_ID'
+      ReadOnly = True
+    end
+    object ADOQuery1Responsible_Name: TStringField
+      FieldName = 'Responsible_Name'
+      Size = 255
+    end
+    object ADOQuery1Responsible_Position: TStringField
+      FieldName = 'Responsible_Position'
+      Size = 100
+    end
+    object ADOQuery1Responsible_Phone: TStringField
+      FieldName = 'Responsible_Phone'
+    end
+    object ADOQuery1Unit_ID: TIntegerField
+      FieldName = 'Unit_ID'
+    end
+    object ADOQuery1id: TIntegerField
+      FieldName = 'id'
+    end
+  end
+  object DataSource3: TDataSource
+    DataSet = ADOQuery1
+    Left = 632
+    Top = 40
+  end
+  object DataSource4: TDataSource
+    DataSet = ADOTable3
+    Left = 168
+    Top = 48
+  end
+  object ADOTable3: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Fedorov_MO_equipment_sizes'
+    Left = 120
+    Top = 48
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 168
+    Top = 8
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Fedorov_Item'
+    Left = 120
+    Top = 8
+    object ADOTable1Field: TIntegerField
+      FieldKind = fkLookup
+      FieldName = #1086#1089#1090#1072#1090#1086#1082' '#1085#1072' '#1089#1082#1083#1072#1076#1077
+      LookupDataSet = ADOTable3
+      LookupKeyFields = 'id'
+      LookupResultField = 'count'
+      KeyFields = 'id'
+      Lookup = True
+    end
+    object ADOTable1Field2: TIntegerField
+      FieldKind = fkLookup
+      FieldName = #1094#1077#1085#1072' '#1079#1072' '#1077#1076#1080#1085#1080#1094#1091
+      LookupDataSet = ADOTable3
+      LookupKeyFields = 'id'
+      LookupResultField = 'price'
+      KeyFields = 'id'
+      Lookup = True
+    end
+    object ADOTable1id: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOTable1name: TStringField
+      FieldName = 'name'
+      Size = 255
+    end
+    object ADOTable1id_manufacture: TIntegerField
+      FieldName = 'id_manufacture'
+    end
+  end
+end

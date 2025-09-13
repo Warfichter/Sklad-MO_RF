@@ -1,6 +1,6 @@
 object AuthForm: TAuthForm
-  Left = 501
-  Top = 247
+  Left = 551
+  Top = 166
   Width = 403
   Height = 310
   Caption = 'AuthForm'
@@ -69,10 +69,7 @@ object AuthForm: TAuthForm
     Left = 48
   end
   object ADOTable1: TADOTable
-    Active = True
     Connection = ADOConnection1
-    CursorType = ctStatic
-    TableName = 'FedorovUser'
     Left = 16
   end
   object ADOQuery1: TADOQuery

@@ -14,7 +14,6 @@ type
     ADOTable1: TADOTable;
     ADOTable2: TADOTable;
     DataSource2: TDataSource;
-    DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
     DBLookupComboBox1: TDBLookupComboBox;
     Button1: TButton;
@@ -27,7 +26,6 @@ type
     ADOTable1Responsible_Phone: TStringField;
     ADOTable1TypeName: TStringField;
     ADOTable1vidName: TStringField;
-    frxReport1: TfrxReport;
     ADOTable4: TADOTable;
     DataSource4: TDataSource;
     DBLookupComboBox3: TDBLookupComboBox;
@@ -46,6 +44,21 @@ type
     DBLookupComboBox2: TDBLookupComboBox;
     ADOTable3: TADOTable;
     DataSource3: TDataSource;
+    ADOTable1id: TAutoIncField;
+    ADOTable1user_rank_id: TIntegerField;
+    ADOTable1title: TStringField;
+    ADOTable1description: TMemoField;
+    ADOTable1price: TBCDField;
+    ADOTable1property_type_id: TIntegerField;
+    ADOTable1item_size_id: TIntegerField;
+    ADOTable1manufacturer_id: TIntegerField;
+    ADOTable1created_at: TDateTimeField;
+    ADOTable1Warehouse_ID: TIntegerField;
+    ADOTable1Users_id: TIntegerField;
+    DBGrid1: TDBGrid;
+    ADOTable5: TADOTable;
+    DataSource5: TDataSource;
+    frxReport1: TfrxReport;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
