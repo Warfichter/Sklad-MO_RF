@@ -43,11 +43,13 @@ object Form3: TForm3
       item
         Expanded = False
         FieldName = 'Warehouse_ID'
+        Title.Caption = #8470' '#1087'/'#1087
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Warehouse_Name'
+        Title.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1089#1082#1083#1072#1076#1072
         Visible = True
       end
       item
@@ -58,6 +60,8 @@ object Form3: TForm3
       item
         Expanded = False
         FieldName = 'Location'
+        Title.Caption = #1052#1077#1089#1090#1086#1087#1086#1083#1086#1078#1077#1085#1080#1077
+        Width = 324
         Visible = True
       end>
   end

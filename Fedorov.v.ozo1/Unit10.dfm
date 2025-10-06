@@ -1,8 +1,8 @@
 object Form10: TForm10
-  Left = 212
-  Top = 129
-  Width = 928
-  Height = 480
+  Left = -8
+  Top = -8
+  Width = 1382
+  Height = 744
   Caption = #1057#1082#1083#1072#1076
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

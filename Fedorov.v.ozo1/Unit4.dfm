@@ -1,8 +1,8 @@
 object FormZajav: TFormZajav
-  Left = 200
-  Top = 96
+  Left = -81
+  Top = 114
   Width = 1382
-  Height = 744
+  Height = 731
   Caption = 'FormZajav'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

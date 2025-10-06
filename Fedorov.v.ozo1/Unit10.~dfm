@@ -1,6 +1,6 @@
 object Form10: TForm10
-  Left = 371
-  Top = 194
+  Left = 212
+  Top = 129
   Width = 928
   Height = 480
   Caption = #1057#1082#1083#1072#1076
