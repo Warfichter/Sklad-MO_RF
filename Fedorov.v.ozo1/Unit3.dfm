@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 182
-  Top = 56
+  Left = 312
+  Top = 169
   Width = 911
   Height = 480
   Caption = 'FormZaz'
@@ -14,11 +14,11 @@ object Form3: TForm3
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 72
-    Top = 56
-    Width = 229
+    Left = 152
+    Top = 64
+    Width = 149
     Height = 16
-    Caption = #1042#1074#1077#1076#1080#1090#1077' '#1087#1077#1088#1074#1091#1102' '#1073#1091#1082#1074#1091' '#1074' '#1085#1072#1079#1074#1072#1085#1080#1080
+    Caption = #1042#1074#1077#1076#1080#1090#1077' '#1085#1086#1084#1077#1088' '#1089#1082#1083#1072#1076#1072
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -26,23 +26,14 @@ object Form3: TForm3
     Font.Style = []
     ParentFont = False
   end
-  object FindEdit: TEdit
-    Left = 304
-    Top = 56
-    Width = 241
-    Height = 21
-    PopupMenu = PopupMenu1
-    TabOrder = 0
-    Text = #1074#1074#1077#1076#1080#1090#1077' '#1089#1080#1084#1074#1086#1083
-  end
   object DBGrid1: TDBGrid
-    Left = 72
+    Left = 40
     Top = 104
     Width = 777
-    Height = 249
+    Height = 145
     DataSource = DataSource1
     PopupMenu = PopupMenu1
-    TabOrder = 1
+    TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -52,86 +43,100 @@ object Form3: TForm3
       item
         Expanded = False
         FieldName = 'Warehouse_ID'
-        Title.Caption = #1053#1086#1084#1077#1088' '#1087'/'#1087
-        Width = 58
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Warehouse_Name'
-        Title.Caption = #1060#1048#1054
-        Width = 260
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Warehouse_Address'
-        Title.Caption = #1040#1076#1088#1077#1089
-        Width = 236
+        FieldName = #1090#1080#1087' '#1086#1073#1084#1091#1085#1076#1080#1088#1086#1074#1072#1085#1080#1103
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Warehouse_Phone'
-        Title.Caption = #1058#1077#1083#1077#1092#1086#1085
-        Width = 173
+        FieldName = 'Location'
         Visible = True
       end>
   end
   object DBNavigator1: TDBNavigator
-    Left = 72
-    Top = 376
+    Left = 64
+    Top = 256
     Width = 770
     Height = 25
-    DataSource = DataSource2
-    TabOrder = 2
+    DataSource = DataSource1
+    TabOrder = 1
   end
   object Button1: TButton
-    Left = 576
-    Top = 56
+    Left = 360
+    Top = 408
     Width = 113
     Height = 25
-    Caption = #1055#1054#1048#1057#1050
-    TabOrder = 3
+    Caption = #1042#1099#1093#1086#1076
+    TabOrder = 2
     OnClick = Button1Click
+  end
+  object DBEdit1: TDBEdit
+    Left = 312
+    Top = 64
+    Width = 33
+    Height = 21
+    DataField = 'ResponsiblePerson_ID'
+    DataSource = DataSource1
+    TabOrder = 3
   end
   object ADOConnection1: TADOConnection
     Connected = True
-    ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=666'
+    ConnectionString = 
+      'Provider=MSDASQL.1;Persist Security Info=False;Data Source=1711z' +
+      '_DB'
     Left = 24
-    Top = 16
   end
   object ADOTable1: TADOTable
     Active = True
+    AutoCalcFields = False
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'Warehouse_Fedorov'
     Left = 104
-    Top = 16
     object ADOTable1Warehouse_ID: TAutoIncField
+      DisplayWidth = 21
       FieldName = 'Warehouse_ID'
       ReadOnly = True
     end
     object ADOTable1Warehouse_Name: TStringField
+      DisplayWidth = 25
       FieldName = 'Warehouse_Name'
       Size = 100
     end
-    object ADOTable1Warehouse_Address: TStringField
-      FieldName = 'Warehouse_Address'
+    object ADOTable1Location: TStringField
+      DisplayWidth = 19
+      FieldName = 'Location'
       Size = 255
     end
-    object ADOTable1Warehouse_Phone: TStringField
-      FieldName = 'Warehouse_Phone'
+    object ADOTable1ResponsiblePerson_ID: TIntegerField
+      DisplayWidth = 33
+      FieldName = 'ResponsiblePerson_ID'
+    end
+    object ADOTable1Field: TStringField
+      FieldKind = fkLookup
+      FieldName = #1090#1080#1087' '#1086#1073#1084#1091#1085#1076#1080#1088#1086#1074#1072#1085#1080#1103
+      LookupDataSet = ADOTable2
+      LookupKeyFields = 'Property_Type_ID'
+      LookupResultField = 'Property_Type_Name'
+      KeyFields = 'Warehouse_ID'
+      Lookup = True
     end
   end
   object DataSource1: TDataSource
     DataSet = ADOTable1
     Left = 64
-    Top = 16
   end
   object PopupMenu1: TPopupMenu
-    Left = 864
-    Top = 136
+    Left = 552
+    Top = 128
     object N1: TMenuItem
       Caption = #1055#1077#1095#1072#1090#1100
       OnClick = N1Click
@@ -152,8 +157,7 @@ object Form3: TForm3
       'begin'
       ''
       'end.')
-    Left = 832
-    Top = 40
+    Left = 456
     Datasets = <
       item
         DataSet = frxDBDataset1
@@ -306,6 +310,11 @@ object Form3: TForm3
             'Warehouse_Phone')
           ParentFont = False
         end
+        object Memo12: TfrxMemoView
+          Left = 249.448980000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+        end
       end
       object MasterData1: TfrxMasterData
         Height = 18.897650000000000000
@@ -393,32 +402,65 @@ object Form3: TForm3
             'Page [Page#]')
         end
       end
+      object SysMemo1: TfrxSysMemoView
+        Left = 166.299320000000000000
+        Top = 204.094620000000000000
+        Width = 94.488250000000000000
+        Height = 18.897650000000000000
+      end
     end
   end
   object frxDBDataset1: TfrxDBDataset
     UserName = 'frxDBDataset1'
     CloseDataSource = False
+    FieldAliases.Strings = (
+      'Warehouse_ID=Warehouse_ID'
+      'Warehouse_Name=Warehouse_Name'
+      'Location=Location'
+      'ResponsiblePerson_ID=ResponsiblePerson_ID'
+      #1090#1080#1087' '#1086#1073#1084#1091#1085#1076#1080#1088#1086#1074#1072#1085#1080#1103'='#1090#1080#1087' '#1086#1073#1084#1091#1085#1076#1080#1088#1086#1074#1072#1085#1080#1103)
     DataSet = ADOTable1
-    Left = 864
-    Top = 40
+    Left = 488
+  end
+  object ADOTable2: TADOTable
+    Active = True
+    AutoCalcFields = False
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Property_Type_Fedorov'
+    Left = 104
+    Top = 32
+    object ADOTable2Property_Type_ID: TAutoIncField
+      FieldName = 'Property_Type_ID'
+      ReadOnly = True
+    end
+    object ADOTable2Property_Type_Name: TStringField
+      FieldName = 'Property_Type_Name'
+      Size = 100
+    end
+    object ADOTable2Property_Type_Description: TMemoField
+      FieldName = 'Property_Type_Description'
+      BlobType = ftMemo
+    end
+    object ADOTable2Size_ID: TIntegerField
+      FieldName = 'Size_ID'
+    end
+  end
+  object DataSource3: TDataSource
+    DataSet = ADOTable2
+    Left = 64
+    Top = 32
   end
   object ADOQuery1: TADOQuery
     Connection = ADOConnection1
     CursorType = ctStatic
-    Parameters = <
-      item
-        Name = 'phone'
-        Size = -1
-        Value = Null
-      end>
-    SQL.Strings = (
-      'Select * from Warehouse_Fedorov where'
-      ' Warehouse_Phone LIKE :phone')
+    DataSource = DataSource1
+    Parameters = <>
     Left = 280
     Top = 8
   end
   object DataSource2: TDataSource
-    DataSet = ADOQuery1
+    DataSet = ADOTable1
     Left = 320
     Top = 8
   end

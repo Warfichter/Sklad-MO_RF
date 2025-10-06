@@ -1,6 +1,6 @@
 object Form9: TForm9
-  Left = 351
-  Top = 245
+  Left = 259
+  Top = 97
   Width = 925
   Height = 480
   Caption = 'Form9'
@@ -27,11 +27,11 @@ object Form9: TForm9
     ParentFont = False
   end
   object DBNavigator1: TDBNavigator
-    Left = 64
-    Top = 400
+    Left = 120
+    Top = 384
     Width = 680
     Height = 25
-    DataSource = DataSource4
+    DataSource = DataSource1
     TabOrder = 0
   end
   object Button1: TButton
@@ -51,11 +51,11 @@ object Form9: TForm9
     Text = #1074#1074#1077#1076#1080#1090#1077' '#1090#1080#1087' '#1080#1084#1091#1097#1077#1089#1090#1074#1072
   end
   object DBGrid1: TDBGrid
-    Left = 96
-    Top = 136
-    Width = 681
-    Height = 233
-    DataSource = DataSource4
+    Left = 104
+    Top = 144
+    Width = 729
+    Height = 225
+    DataSource = DataSource1
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -66,39 +66,34 @@ object Form9: TForm9
       item
         Expanded = False
         FieldName = 'id'
+        Title.Caption = #8470' '#1087'/'#1087
+        Width = 109
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'price'
-        Title.Caption = #1062#1077#1085#1072
+        FieldName = 'name'
+        Title.Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077
+        Width = 118
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'id_item'
-        Title.Caption = #1042#1080#1076' '#1080#1084#1091#1097#1077#1089#1090#1074#1072
+        FieldName = 'id_manufacture'
+        Title.Caption = #1055#1088#1086#1080#1079#1074#1086#1076#1080#1090#1077#1083#1100
         Width = 116
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'id_itemsize'
-        Title.Caption = #1056#1072#1079#1084#1077#1088
-        Width = 93
+        FieldName = #1086#1089#1090#1072#1090#1086#1082' '#1085#1072' '#1089#1082#1083#1072#1076#1077
+        Width = 141
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'count'
-        Title.Caption = #1054#1089#1090#1072#1090#1086#1082' '#1085#1072' '#1089#1082#1083#1072#1076#1077
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'datep'
-        Title.Caption = #1044#1072#1090#1072
-        Width = 150
+        FieldName = #1094#1077#1085#1072' '#1079#1072' '#1077#1076#1080#1085#1080#1094#1091
+        Width = 167
         Visible = True
       end>
   end
@@ -106,7 +101,7 @@ object Form9: TForm9
     Connected = True
     ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=666'
     Left = 72
-    Top = 24
+    Top = 8
   end
   object frxDBDataset2: TfrxDBDataset
     UserName = 'frxDBDataset1'
@@ -334,7 +329,7 @@ object Form9: TForm9
   object DataSource4: TDataSource
     DataSet = ADOTable3
     Left = 168
-    Top = 24
+    Top = 48
   end
   object ADOTable3: TADOTable
     Active = True
@@ -342,27 +337,48 @@ object Form9: TForm9
     CursorType = ctStatic
     TableName = 'Fedorov_MO_equipment_sizes'
     Left = 120
-    Top = 24
-    object ADOTable3id: TAutoIncField
+    Top = 48
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 168
+    Top = 8
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Fedorov_Item'
+    Left = 120
+    Top = 8
+    object ADOTable1Field: TIntegerField
+      FieldKind = fkLookup
+      FieldName = #1086#1089#1090#1072#1090#1086#1082' '#1085#1072' '#1089#1082#1083#1072#1076#1077
+      LookupDataSet = ADOTable3
+      LookupKeyFields = 'id'
+      LookupResultField = 'count'
+      KeyFields = 'id'
+      Lookup = True
+    end
+    object ADOTable1Field2: TIntegerField
+      FieldKind = fkLookup
+      FieldName = #1094#1077#1085#1072' '#1079#1072' '#1077#1076#1080#1085#1080#1094#1091
+      LookupDataSet = ADOTable3
+      LookupKeyFields = 'id'
+      LookupResultField = 'price'
+      KeyFields = 'id'
+      Lookup = True
+    end
+    object ADOTable1id: TAutoIncField
       FieldName = 'id'
       ReadOnly = True
     end
-    object ADOTable3price: TBCDField
-      FieldName = 'price'
-      Precision = 10
-      Size = 2
+    object ADOTable1name: TStringField
+      FieldName = 'name'
+      Size = 255
     end
-    object ADOTable3id_item: TIntegerField
-      FieldName = 'id_item'
-    end
-    object ADOTable3id_itemsize: TIntegerField
-      FieldName = 'id_itemsize'
-    end
-    object ADOTable3count: TIntegerField
-      FieldName = 'count'
-    end
-    object ADOTable3datep: TDateTimeField
-      FieldName = 'datep'
+    object ADOTable1id_manufacture: TIntegerField
+      FieldName = 'id_manufacture'
     end
   end
 end
