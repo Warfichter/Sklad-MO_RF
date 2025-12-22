@@ -151,6 +151,7 @@ object MainForm: TMainForm
   end
   object sSkinManager1: TsSkinManager
     ButtonsOptions.OldGlyphsMode = False
+    IsDefault = False
     InternalSkins = <
       item
         Name = 'Deep (internal)'

@@ -1,7 +1,7 @@
 object FormZajav: TFormZajav
-  Left = -81
-  Top = 114
-  Width = 1382
+  Left = 314
+  Top = 96
+  Width = 959
   Height = 731
   Caption = 'FormZajav'
   Color = clBtnFace
@@ -56,11 +56,11 @@ object FormZajav: TFormZajav
     Caption = #1054#1087#1077#1088#1072#1090#1086#1088
   end
   object Label7: TLabel
-    Left = 400
+    Left = 480
     Top = 64
-    Width = 115
+    Width = 34
     Height = 16
-    Caption = #1042#1074#1077#1076#1080#1090#1077' '#1079#1085#1095#1077#1085#1080#1077
+    Caption = #1042#1077#1097#1080
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -68,14 +68,95 @@ object FormZajav: TFormZajav
     Font.Style = []
     ParentFont = False
   end
-  object DBGrid1: TDBGrid
+  object DBNavigator1: TDBNavigator
+    Left = 32
+    Top = 512
+    Width = 880
+    Height = 33
+    DataSource = DataSource3
+    TabOrder = 0
+  end
+  object DBEdit1: TDBEdit
+    Left = 248
+    Top = 16
+    Width = 145
+    Height = 21
+    DataField = 'Responsible_Position'
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 248
+    Top = 40
+    Width = 145
+    Height = 21
+    KeyField = 'Responsible_ID'
+    ListField = 'Responsible_Name'
+    ListSource = DataSource1
+    TabOrder = 2
+  end
+  object DBLookupComboBox2: TDBLookupComboBox
+    Left = 248
+    Top = 64
+    Width = 145
+    Height = 21
+    KeyField = 'Responsible_ID'
+    ListField = 'Vidacha'
+    ListSource = DataSource2
+    TabOrder = 3
+  end
+  object DBLookupComboBox3: TDBLookupComboBox
+    Left = 248
+    Top = 88
+    Width = 145
+    Height = 21
+    KeyField = 'Size_ID'
+    ListField = 'Size_Name'
+    ListSource = DataSource4
+    TabOrder = 4
+  end
+  object DBLookupComboBox4: TDBLookupComboBox
+    Left = 248
+    Top = 112
+    Width = 145
+    Height = 21
+    KeyField = 'Property_Type_ID'
+    ListField = 'Property_Type_Name'
+    ListSource = DataSource5
+    TabOrder = 5
+  end
+  object Edit1: TEdit
+    Left = 696
+    Top = 96
+    Width = 121
+    Height = 21
+    TabOrder = 6
+    Text = #1060#1077#1076#1086#1088#1086#1074' '#1040'.'#1042'.'
+  end
+  object Edit2: TEdit
+    Left = 520
+    Top = 56
+    Width = 161
+    Height = 21
+    TabOrder = 7
+  end
+  object Button1: TButton
+    Left = 696
+    Top = 56
+    Width = 113
+    Height = 25
+    Caption = #1055#1054#1048#1057#1050
+    TabOrder = 8
+    OnClick = Button1Click
+  end
+  object DBGrid2: TDBGrid
     Left = 16
-    Top = 152
-    Width = 833
-    Height = 217
+    Top = 168
+    Width = 905
+    Height = 329
     DataSource = DataSource3
     PopupMenu = PopupMenu1
-    TabOrder = 0
+    TabOrder = 9
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -84,9 +165,14 @@ object FormZajav: TFormZajav
     Columns = <
       item
         Expanded = False
-        FieldName = 'FIO'
+        FieldName = 'Warehouse_ID'
+        Width = 50
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Warehouse_Name'
         Title.Caption = #1060#1072#1084#1080#1083#1080#1103' '#1048#1084#1103' '#1054#1090#1095#1077#1089#1090#1074#1086
-        Width = 180
         Visible = True
       end
       item
@@ -105,96 +191,24 @@ object FormZajav: TFormZajav
         Expanded = False
         FieldName = 'Size'
         Title.Caption = #1056#1072#1079#1084#1077#1088
-        Width = 66
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Vechi'
         Title.Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1074#1077#1097#1077#1081
-        Width = 193
+        Width = 166
         Visible = True
       end>
   end
-  object DBNavigator1: TDBNavigator
-    Left = 32
-    Top = 384
-    Width = 840
-    Height = 41
-    DataSource = DataSource3
-    TabOrder = 1
-  end
-  object DBEdit1: TDBEdit
-    Left = 248
-    Top = 16
-    Width = 145
-    Height = 21
-    DataField = 'Responsible_Position'
-    DataSource = DataSource1
-    TabOrder = 2
-  end
-  object DBLookupComboBox1: TDBLookupComboBox
-    Left = 248
-    Top = 40
-    Width = 145
-    Height = 21
-    KeyField = 'Responsible_ID'
-    ListField = 'Responsible_Name'
-    ListSource = DataSource1
-    TabOrder = 3
-  end
-  object DBLookupComboBox2: TDBLookupComboBox
-    Left = 248
-    Top = 64
-    Width = 145
-    Height = 21
-    KeyField = 'Responsible_ID'
-    ListField = 'Vidacha'
-    ListSource = DataSource2
-    TabOrder = 4
-  end
-  object DBLookupComboBox3: TDBLookupComboBox
-    Left = 248
-    Top = 88
-    Width = 145
-    Height = 21
-    KeyField = 'Size_ID'
-    ListField = 'Size_Name'
-    ListSource = DataSource4
-    TabOrder = 5
-  end
-  object DBLookupComboBox4: TDBLookupComboBox
-    Left = 248
-    Top = 112
-    Width = 145
-    Height = 21
-    KeyField = 'Property_Type_ID'
-    ListField = 'Property_Type_Name'
-    ListSource = DataSource5
-    TabOrder = 6
-  end
-  object Edit1: TEdit
-    Left = 696
-    Top = 96
-    Width = 121
-    Height = 21
-    TabOrder = 7
-    Text = #1060#1077#1076#1086#1088#1086#1074' '#1040'.'#1042'.'
-  end
-  object Edit2: TEdit
-    Left = 520
-    Top = 56
-    Width = 161
-    Height = 21
-    TabOrder = 8
-  end
-  object Button1: TButton
-    Left = 696
-    Top = 56
+  object Button2: TButton
+    Left = 384
+    Top = 576
     Width = 113
     Height = 25
-    Caption = #1055#1054#1048#1057#1050
-    TabOrder = 9
+    Caption = #1074#1099#1093#1086#1076
+    TabOrder = 10
+    OnClick = Button1Click
   end
   object ADOConnection1: TADOConnection
     Connected = True
@@ -216,21 +230,26 @@ object FormZajav: TFormZajav
     Left = 88
     Top = 32
     object ADOTable2Responsible_ID: TAutoIncField
+      DisplayWidth = 15
       FieldName = 'Responsible_ID'
       ReadOnly = True
     end
     object ADOTable2Responsible_Name: TStringField
+      DisplayWidth = 50
       FieldName = 'Responsible_Name'
       Size = 255
     end
     object ADOTable2Responsible_Position: TStringField
+      DisplayWidth = 45
       FieldName = 'Responsible_Position'
       Size = 100
     end
     object ADOTable2Responsible_Phone: TStringField
+      DisplayWidth = 24
       FieldName = 'Responsible_Phone'
     end
     object ADOTable2Unit_ID: TIntegerField
+      DisplayWidth = 12
       FieldName = 'Unit_ID'
     end
   end
@@ -256,26 +275,26 @@ object FormZajav: TFormZajav
     Left = 496
     Top = 8
     object ADOTable3Warehouse_ID: TAutoIncField
-      DisplayWidth = 18
+      DisplayWidth = 13
       FieldName = 'Warehouse_ID'
       ReadOnly = True
     end
     object ADOTable3Warehouse_Name: TStringField
-      DisplayWidth = 28
+      DisplayWidth = 35
       FieldName = 'Warehouse_Name'
       Size = 100
     end
     object ADOTable3Warehouse_Address: TStringField
-      DisplayWidth = 38
+      DisplayWidth = 28
       FieldName = 'Warehouse_Address'
       Size = 255
     end
     object ADOTable3Warehouse_Phone: TStringField
-      DisplayWidth = 23
+      DisplayWidth = 28
       FieldName = 'Warehouse_Phone'
     end
     object ADOTable3Size: TStringField
-      DisplayWidth = 27
+      DisplayWidth = 15
       FieldKind = fkLookup
       FieldName = 'Size'
       LookupDataSet = ADOTable4
@@ -285,6 +304,7 @@ object FormZajav: TFormZajav
       Lookup = True
     end
     object ADOTable3FIO: TStringField
+      DisplayWidth = 34
       FieldKind = fkLookup
       FieldName = 'FIO'
       LookupDataSet = ADOTable2
@@ -294,6 +314,7 @@ object FormZajav: TFormZajav
       Lookup = True
     end
     object ADOTable3Vechi: TStringField
+      DisplayWidth = 24
       FieldKind = fkLookup
       FieldName = 'Vechi'
       LookupDataSet = ADOTable5
@@ -330,8 +351,8 @@ object FormZajav: TFormZajav
     Top = 104
   end
   object PopupMenu1: TPopupMenu
-    Left = 760
-    Top = 184
+    Left = 496
+    Top = 288
     object G1: TMenuItem
       Caption = #1055#1077#1095#1072#1090#1100' '#1079#1072#1103#1074#1082#1080
       OnClick = G1Click
@@ -418,8 +439,8 @@ object FormZajav: TFormZajav
         end
         object Rich1: TfrxRichView
           Left = 37.795300000000000000
-          Top = 56.692950000000000000
-          Width = 529.134200000000000000
+          Top = 64.252010000000000000
+          Width = 668.976810000000000000
           Height = 158.740260000000000000
           GapX = 2.000000000000000000
           GapY = 1.000000000000000000
@@ -477,6 +498,24 @@ object FormZajav: TFormZajav
   end
   object frxRichObject1: TfrxRichObject
     Left = 712
+    Top = 8
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    DataSource = DataSource2
+    Parameters = <
+      item
+        Name = 'text'
+        DataType = ftString
+        Size = 1
+        Value = '%'
+      end>
+    SQL.Strings = (
+      'Select * from Warehouse_Fedorov where'
+      'Warehouse_Name like :text')
+    Left = 536
     Top = 8
   end
 end

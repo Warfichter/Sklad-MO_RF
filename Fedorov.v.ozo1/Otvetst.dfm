@@ -1,6 +1,6 @@
 object OtvetstForm: TOtvetstForm
-  Left = 236
-  Top = 87
+  Left = 229
+  Top = 48
   Width = 1119
   Height = 744
   Caption = 'OtvetstForm'
@@ -22,9 +22,9 @@ object OtvetstForm: TOtvetstForm
   end
   object DBNavigator1: TDBNavigator
     Left = 88
-    Top = 440
+    Top = 576
     Width = 960
-    Height = 81
+    Height = 41
     DataSource = DataSource5
     TabOrder = 0
   end
@@ -35,9 +35,9 @@ object OtvetstForm: TOtvetstForm
     Height = 21
     DataField = 'Property_Type_ID'
     DataSource = DataSource4
-    KeyField = 'Warehouse_ID'
-    ListField = 'Warehouse_Name'
-    ListSource = DataSource2
+    KeyField = 'user_rank_id'
+    ListField = 'manufacturer_id'
+    ListSource = DataSource1
     TabOrder = 1
   end
   object Button1: TButton
@@ -54,8 +54,8 @@ object OtvetstForm: TOtvetstForm
     Top = 40
     Width = 209
     Height = 21
-    DataField = 'Responsible_ID'
-    DataSource = DataSource4
+    DataField = 'Responsible_Name'
+    DataSource = DataSource1
     KeyField = 'Responsible_ID'
     ListField = 'Responsible_Name'
     ListSource = DataSource1
@@ -86,14 +86,76 @@ object OtvetstForm: TOtvetstForm
     Left = 72
     Top = 208
     Width = 993
-    Height = 217
-    DataSource = DataSource5
+    Height = 353
+    DataSource = DataSource2
     TabOrder = 6
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'user_rank_id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Responsible_ID'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'property_type_id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'title'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'description'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'price'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'item_size_id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'manufacturer_id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'created_at'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Warehouse_ID'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Users_id'
+        Visible = True
+      end>
   end
   object DataSource1: TDataSource
     DataSet = ADOTable1
@@ -110,7 +172,8 @@ object OtvetstForm: TOtvetstForm
   object ADOTable1: TADOTable
     Connection = ADOConnection1
     CursorType = ctStatic
-    TableName = 'Fedorov_MO_warehouse'
+    MasterSource = DataSource2
+    TableName = 'Fedorov_MO_equipment_sizes'
     Left = 88
     Top = 32
     object ADOTable1Responsible_ID: TAutoIncField

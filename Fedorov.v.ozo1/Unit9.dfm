@@ -41,6 +41,7 @@ object Form9: TForm9
     Height = 41
     Caption = #1053#1072#1095#1072#1090#1100' '#1087#1086#1080#1089#1082
     TabOrder = 1
+    OnClick = Button1Click
   end
   object FindEdit: TEdit
     Left = 224
@@ -105,7 +106,7 @@ object Form9: TForm9
   end
   object frxDBDataset2: TfrxDBDataset
     UserName = 'frxDBDataset1'
-    CloseDataSource = False
+    CloseDataSource = True
     FieldAliases.Strings = (
       'Unit_ID=Unit_ID'
       'Unit_Number=Unit_Number'
@@ -113,7 +114,6 @@ object Form9: TForm9
       'Unit_Address=Unit_Address'
       'Unit_Phone=Unit_Phone'
       'Warehouse_ID=Warehouse_ID')
-    DataSet = ADOQuery1
     Left = 528
     Top = 40
   end
@@ -283,46 +283,7 @@ object Form9: TForm9
       end
     end
   end
-  object ADOQuery1: TADOQuery
-    Active = True
-    ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=666'
-    CursorType = ctStatic
-    Parameters = <
-      item
-        Name = 'phone'
-        DataType = ftString
-        Size = 1
-        Value = '%'
-      end>
-    SQL.Strings = (
-      'Select * from Responsible_Person_Fedorov where'
-      ' Responsible_Phone like :phone')
-    Left = 592
-    Top = 40
-    object ADOQuery1Responsible_ID: TAutoIncField
-      FieldName = 'Responsible_ID'
-      ReadOnly = True
-    end
-    object ADOQuery1Responsible_Name: TStringField
-      FieldName = 'Responsible_Name'
-      Size = 255
-    end
-    object ADOQuery1Responsible_Position: TStringField
-      FieldName = 'Responsible_Position'
-      Size = 100
-    end
-    object ADOQuery1Responsible_Phone: TStringField
-      FieldName = 'Responsible_Phone'
-    end
-    object ADOQuery1Unit_ID: TIntegerField
-      FieldName = 'Unit_ID'
-    end
-    object ADOQuery1id: TIntegerField
-      FieldName = 'id'
-    end
-  end
   object DataSource3: TDataSource
-    DataSet = ADOQuery1
     Left = 632
     Top = 40
   end
@@ -380,5 +341,21 @@ object Form9: TForm9
     object ADOTable1id_manufacture: TIntegerField
       FieldName = 'id_manufacture'
     end
+  end
+  object ADOQuery1: TADOQuery
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    DataSource = DataSource1
+    Parameters = <
+      item
+        Name = 'text'
+        DataType = ftString
+        Size = 1
+        Value = '%'
+      end>
+    SQL.Strings = (
+      'SELECT * FROM Fedorov_Item where name like :text')
+    Left = 584
+    Top = 40
   end
 end

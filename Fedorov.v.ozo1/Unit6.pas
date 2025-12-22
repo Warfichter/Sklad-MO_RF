@@ -34,7 +34,13 @@ type
     Label1: TLabel;
     Button2: TButton;
     ADOTable5Field: TStringField;
+    ADOQuery2: TADOQuery;
+    DBGrid2: TDBGrid;
+    LabeledEdit1: TLabeledEdit;
+    Label2: TLabel;
+    Label3: TLabel;
     procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,5 +58,12 @@ procedure TForm5.Button2Click(Sender: TObject);
 begin
 close;
 end;
+
+procedure TForm5.Button1Click(Sender: TObject);
+begin
+ADOQuery1.Active :=false;
+ADOQuery1.Parameters.ParamByName('text').Value :='%'+ LabeledEdit1.text+'%';
+ADOQuery1.Active :=true;
+  end;
 
 end.

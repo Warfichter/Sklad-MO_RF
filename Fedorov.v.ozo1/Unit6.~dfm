@@ -1,8 +1,8 @@
 object Form5: TForm5
-  Left = 356
-  Top = 406
+  Left = 236
+  Top = 108
   Width = 965
-  Height = 447
+  Height = 534
   Caption = 'Form5'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,23 +14,43 @@ object Form5: TForm5
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 184
-    Top = 40
+    Left = 88
+    Top = 136
     Width = 116
     Height = 13
     Caption = #1053#1086#1084#1077#1088' '#1074#1086#1080#1085#1089#1082#1086#1081' '#1095#1072#1089#1090#1080
   end
+  object Label2: TLabel
+    Left = 48
+    Top = 168
+    Width = 27
+    Height = 13
+    Caption = #1060#1048#1054
+  end
+  object Label3: TLabel
+    Left = 208
+    Top = 8
+    Width = 569
+    Height = 32
+    Caption = #1055#1054#1048#1057#1050' '#1055#1054' '#1050#1054#1053#1058#1040#1050#1058#1053#1067#1052' '#1044#1040#1053#1053#1067#1052' '#1057#1054#1058#1056#1059#1044#1053#1048#1050#1040
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -20
+    Font.Name = 'Segoe Script'
+    Font.Style = []
+    ParentFont = False
+  end
   object DBNavigator1: TDBNavigator
-    Left = 56
-    Top = 304
+    Left = 64
+    Top = 416
     Width = 790
-    Height = 49
+    Height = 33
     DataSource = DataSource5
     TabOrder = 0
   end
   object DBEdit1: TDBEdit
-    Left = 304
-    Top = 40
+    Left = 224
+    Top = 136
     Width = 65
     Height = 21
     DataField = 'Unit_Number'
@@ -39,7 +59,7 @@ object Form5: TForm5
   end
   object DBGrid1: TDBGrid
     Left = 47
-    Top = 104
+    Top = 216
     Width = 834
     Height = 193
     DataSource = DataSource5
@@ -59,7 +79,7 @@ object Form5: TForm5
       item
         Expanded = False
         FieldName = #1060#1048#1054
-        Width = 146
+        Width = 122
         Visible = True
       end
       item
@@ -87,37 +107,82 @@ object Form5: TForm5
         Expanded = False
         FieldName = 'Unit_Phone'
         Title.Caption = #1058#1077#1083#1077#1092#1086#1085
-        Width = 109
+        Width = 162
         Visible = True
       end>
   end
   object DBLookupComboBox1: TDBLookupComboBox
-    Left = 208
-    Top = 72
+    Left = 80
+    Top = 160
     Width = 209
     Height = 21
-    DataField = 'Unit_Phone'
+    DataField = #1060#1048#1054
     DataSource = DataSource5
-    KeyField = 'Unit_Name'
-    ListSource = DataSource1
     TabOrder = 3
   end
   object Button1: TButton
-    Left = 536
-    Top = 64
+    Left = 720
+    Top = 56
     Width = 163
     Height = 25
     Caption = #1053#1072#1081#1090#1080
     TabOrder = 4
+    OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 360
-    Top = 368
+    Left = 376
+    Top = 456
     Width = 163
     Height = 25
     Caption = #1042#1099#1081#1090#1080
     TabOrder = 5
     OnClick = Button2Click
+  end
+  object DBGrid2: TDBGrid
+    Left = 304
+    Top = 88
+    Width = 577
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 6
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Unit_ID'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Unit_Number'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Unit_Address'
+        Width = 213
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Unit_Phone'
+        Width = 140
+        Visible = True
+      end>
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 504
+    Top = 56
+    Width = 177
+    Height = 21
+    EditLabel.Width = 79
+    EditLabel.Height = 13
+    EditLabel.Caption = #1055#1086#1080#1089#1082' '#1087#1086' '#1073#1091#1082#1074#1077
+    TabOrder = 7
   end
   object ADOTable5: TADOTable
     Active = True
@@ -177,23 +242,24 @@ object Form5: TForm5
   end
   object DataSource1: TDataSource
     DataSet = ADOQuery1
-    Left = 392
-    Top = 8
+    Left = 592
   end
   object ADOQuery1: TADOQuery
-    ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=666'
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
     DataSource = DataSource5
     Parameters = <
       item
-        Name = 'Name'
-        Size = -1
-        Value = Null
+        Name = 'text'
+        DataType = ftString
+        Size = 1
+        Value = '%'
       end>
     SQL.Strings = (
-      'SELECT * FROM Military_Unit_Fedorov'
-      'WHERE Property_Type_Name = :Name')
-    Left = 440
-    Top = 8
+      'SELECT * FROM Military_Unit_Fedorov where '
+      'Unit_Address like :text')
+    Left = 648
   end
   object ADOTable1: TADOTable
     Active = True
@@ -231,5 +297,13 @@ object Form5: TForm5
     DataSet = ADOTable1
     Left = 128
     Top = 64
+  end
+  object ADOQuery2: TADOQuery
+    DataSource = DataSource5
+    Parameters = <>
+    SQL.Strings = (
+      'Select *from ')
+    Left = 128
+    Top = 96
   end
 end

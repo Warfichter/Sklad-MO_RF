@@ -9,7 +9,6 @@ uses
 
 type
   TFormZajav = class(TForm)
-    DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
     DBEdit1: TDBEdit;
     DBLookupComboBox1: TDBLookupComboBox;
@@ -52,8 +51,12 @@ type
     Label7: TLabel;
     Edit2: TEdit;
     Button1: TButton;
+    ADOQuery1: TADOQuery;
     frxReport1: TfrxReport;
+    DBGrid2: TDBGrid;
+    Button2: TButton;
     procedure G1Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -84,6 +87,11 @@ begin
 
   // Запустите отчет
   frxReport1.ShowReport;
+end;
+
+procedure TFormZajav.Button1Click(Sender: TObject);
+begin
+close;
 end;
 
 end.

@@ -16,16 +16,9 @@ type
     ADOConnection1: TADOConnection;
     frxDBDataset2: TfrxDBDataset;
     frxReport2: TfrxReport;
-    ADOQuery1: TADOQuery;
     DataSource3: TDataSource;
     DataSource4: TDataSource;
     ADOTable3: TADOTable;
-    ADOQuery1Responsible_ID: TAutoIncField;
-    ADOQuery1Responsible_Name: TStringField;
-    ADOQuery1Responsible_Position: TStringField;
-    ADOQuery1Responsible_Phone: TStringField;
-    ADOQuery1Unit_ID: TIntegerField;
-    ADOQuery1id: TIntegerField;
     DataSource1: TDataSource;
     ADOTable1: TADOTable;
     ADOTable1Field: TIntegerField;
@@ -34,6 +27,8 @@ type
     ADOTable1id: TAutoIncField;
     ADOTable1name: TStringField;
     ADOTable1id_manufacture: TIntegerField;
+    ADOQuery1: TADOQuery;
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,5 +41,12 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm9.Button1Click(Sender: TObject);
+begin
+ADOQuery1.Active :=false;
+ADOQuery1.Parameters.ParamByName('text').Value :='%'+ FindEdit.text+'%';
+ADOQuery1.Active :=true;
+  end;
 
 end.

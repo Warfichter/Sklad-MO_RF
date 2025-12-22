@@ -61,6 +61,7 @@ object Form3: TForm3
         Expanded = False
         FieldName = 'Location'
         Title.Caption = #1052#1077#1089#1090#1086#1087#1086#1083#1086#1078#1077#1085#1080#1077
+        Width = 324
         Visible = True
       end>
   end

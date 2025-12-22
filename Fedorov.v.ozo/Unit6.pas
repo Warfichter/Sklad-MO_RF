@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DBCtrls, DB, ADODB, Grids, DBGrids, StdCtrls, Mask, ExtCtrls;
+  Dialogs, DBCtrls, DB, ADODB, Grids, DBGrids, StdCtrls, Mask, ExtCtrls,
+  frxClass, frxDBSet;
 
 type
   TForm5 = class(TForm)
@@ -34,7 +35,11 @@ type
     Label1: TLabel;
     Button2: TButton;
     ADOTable5Field: TStringField;
+    frxDBDataset1: TfrxDBDataset;
+    frxReport1: TfrxReport;
+    Button3: TButton;
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,6 +56,11 @@ implementation
 procedure TForm5.Button2Click(Sender: TObject);
 begin
 close;
+end;
+
+procedure TForm5.Button3Click(Sender: TObject);
+begin
+frxReport1.ShowReport();
 end;
 
 end.

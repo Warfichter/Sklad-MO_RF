@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = -28
-  Top = 148
+  Left = 79
+  Top = 92
   Width = 1166
   Height = 722
   Caption = 'Form2'
@@ -120,8 +120,8 @@ object Form2: TForm2
     Top = 8
   end
   object PopupMenu1: TPopupMenu
-    Left = 784
-    Top = 152
+    Left = 648
+    Top = 184
     object N1: TMenuItem
       Caption = #1055#1077#1095#1072#1090#1100
       OnClick = N1Click

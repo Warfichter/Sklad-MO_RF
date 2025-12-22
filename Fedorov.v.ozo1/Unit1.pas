@@ -107,7 +107,7 @@ end;
 
 procedure TMainForm.Button1Click(Sender: TObject);
 begin
-Form3.showModal();
+Form5.showModal();
 end;
 
 procedure TMainForm.Button4Click(Sender: TObject);

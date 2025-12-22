@@ -1,7 +1,7 @@
 object OtvetstForm: TOtvetstForm
-  Left = -135
-  Top = 154
-  Width = 1382
+  Left = 236
+  Top = 87
+  Width = 1119
   Height = 744
   Caption = 'OtvetstForm'
   Color = clBtnFace

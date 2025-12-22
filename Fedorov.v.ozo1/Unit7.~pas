@@ -30,12 +30,15 @@ type
     Label1: TLabel;
     Label2: TLabel;
     Button1: TButton;
-    FindEdit: TEdit;
+    FindEdit22: TEdit;
     frxDBDataset2: TfrxDBDataset;
     frxReport2: TfrxReport;
     ADOQuery1: TADOQuery;
     DataSource3: TDataSource;
+    DBGrid2: TDBGrid;
+    Button2: TButton;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,8 +55,13 @@ implementation
 procedure TForm7.Button1Click(Sender: TObject);
 begin
 ADOQuery1.Active :=false;
-ADOQuery1.Parameters.ParamByName('Responsible_Name').Value := '%' + FindEdit.text+ '%';
+ADOQuery1.Parameters.ParamByName('text').Value := '%' + FindEdit22.text+ '%';
 ADOQuery1.Active :=true;
  end;
+
+procedure TForm7.Button2Click(Sender: TObject);
+begin
+close;
+end;
 
 end.
