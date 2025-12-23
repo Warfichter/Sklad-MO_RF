@@ -1,6 +1,6 @@
 object AuthForm: TAuthForm
-  Left = 551
-  Top = 166
+  Left = 428
+  Top = 233
   Width = 403
   Height = 310
   Caption = 'AuthForm'

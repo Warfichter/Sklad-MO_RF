@@ -154,22 +154,26 @@ object Form5: TForm5
       item
         Expanded = False
         FieldName = 'Unit_ID'
+        Title.Caption = #8470' '#1087'/'#1087
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Unit_Number'
+        Title.Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Unit_Address'
+        Title.Caption = #1040#1076#1088#1077#1089' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080
         Width = 213
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Unit_Phone'
+        Title.Caption = #1058#1077#1083#1077#1092#1086#1085
         Width = 140
         Visible = True
       end>

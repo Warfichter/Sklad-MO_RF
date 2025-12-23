@@ -1,6 +1,6 @@
 object OtvetstForm: TOtvetstForm
-  Left = 229
-  Top = 48
+  Left = 173
+  Top = 80
   Width = 1119
   Height = 744
   Caption = 'OtvetstForm'
@@ -148,7 +148,6 @@ object OtvetstForm: TOtvetstForm
       item
         Expanded = False
         FieldName = 'Warehouse_ID'
-        Width = 64
         Visible = True
       end
       item

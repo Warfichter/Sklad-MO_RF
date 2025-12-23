@@ -1,8 +1,8 @@
 object Form10: TForm10
-  Left = -8
-  Top = -8
-  Width = 1382
-  Height = 744
+  Left = 187
+  Top = 442
+  Width = 902
+  Height = 416
   Caption = #1057#1082#1083#1072#1076
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -29,8 +29,8 @@ object Form10: TForm10
   object DBGrid1: TDBGrid
     Left = 96
     Top = 80
-    Width = 777
-    Height = 257
+    Width = 761
+    Height = 145
     DataSource = DataSource1
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
@@ -42,13 +42,14 @@ object Form10: TForm10
       item
         Expanded = False
         FieldName = 'id'
+        Title.Caption = #8470' '#1087'/'#1087
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'manufacturer'
         Title.Caption = #1055#1088#1086#1080#1079#1074#1086#1076#1080#1090#1077#1083#1100
-        Width = 112
+        Width = 149
         Visible = True
       end
       item
@@ -67,13 +68,13 @@ object Form10: TForm10
       item
         Expanded = False
         FieldName = #1062#1077#1085#1072' '#1079#1072' '#1077#1076#1080#1085#1080#1094#1091
-        Width = 221
+        Width = 177
         Visible = True
       end>
   end
   object Button1: TButton
-    Left = 400
-    Top = 392
+    Left = 392
+    Top = 272
     Width = 113
     Height = 25
     Caption = #1085#1072#1079#1072#1076
@@ -81,8 +82,8 @@ object Form10: TForm10
     OnClick = Button1Click
   end
   object DBNavigator1: TDBNavigator
-    Left = 96
-    Top = 344
+    Left = 120
+    Top = 232
     Width = 740
     Height = 25
     DataSource = DataSource1

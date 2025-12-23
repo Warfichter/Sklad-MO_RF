@@ -109,7 +109,7 @@ object Form7: TForm7
   object DBGrid2: TDBGrid
     Left = 72
     Top = 96
-    Width = 737
+    Width = 745
     Height = 137
     DataSource = DataSource3
     TabOrder = 4
@@ -127,13 +127,13 @@ object Form7: TForm7
       item
         Expanded = False
         FieldName = 'Responsible_Name'
-        Width = 282
+        Width = 189
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Responsible_Position'
-        Width = 434
+        Width = 445
         Visible = True
       end>
   end

@@ -34,6 +34,7 @@ type
     ADOQuery1: TADOQuery;
     DataSource2: TDataSource;
     frxReport1: TfrxReport;
+    Button2: TButton;
     procedure N1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
   private

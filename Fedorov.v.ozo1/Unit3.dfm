@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 296
-  Top = 75
+  Left = 305
+  Top = 169
   Width = 911
   Height = 480
   Caption = 'FormZaz'
@@ -61,7 +61,7 @@ object Form3: TForm3
         Expanded = False
         FieldName = 'Location'
         Title.Caption = #1052#1077#1089#1090#1086#1087#1086#1083#1086#1078#1077#1085#1080#1077
-        Width = 324
+        Width = 332
         Visible = True
       end>
   end
@@ -85,11 +85,20 @@ object Form3: TForm3
   object DBEdit1: TDBEdit
     Left = 312
     Top = 64
-    Width = 33
+    Width = 113
     Height = 21
     DataField = 'ResponsiblePerson_ID'
     DataSource = DataSource1
     TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 464
+    Top = 64
+    Width = 163
+    Height = 25
+    Caption = #1053#1072#1081#1090#1080
+    TabOrder = 4
+    OnClick = Button1Click
   end
   object ADOConnection1: TADOConnection
     Connected = True
