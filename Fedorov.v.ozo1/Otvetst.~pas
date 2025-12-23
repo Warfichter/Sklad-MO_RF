@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DBCtrls, StdCtrls, Mask, ExtCtrls, Grids, DBGrids, DB, ADODB,
-  frxClass, frxExportXLS, frxRich, frxDBSet;
+  frxClass, frxExportXLS, frxRich, frxDBSet, Menus;
 
 type
   TOtvetstForm = class(TForm)
@@ -59,6 +59,7 @@ type
     ADOTable5: TADOTable;
     DataSource5: TDataSource;
     frxReport1: TfrxReport;
+    PopupMenu1: TPopupMenu;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }

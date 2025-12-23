@@ -1,6 +1,6 @@
 object Form9: TForm9
-  Left = 245
-  Top = 171
+  Left = 307
+  Top = 376
   Width = 925
   Height = 480
   Caption = 'Form9'
@@ -27,8 +27,8 @@ object Form9: TForm9
     ParentFont = False
   end
   object DBNavigator1: TDBNavigator
-    Left = 120
-    Top = 384
+    Left = 128
+    Top = 288
     Width = 680
     Height = 25
     DataSource = DataSource1
@@ -41,6 +41,7 @@ object Form9: TForm9
     Height = 41
     Caption = #1053#1072#1095#1072#1090#1100' '#1087#1086#1080#1089#1082
     TabOrder = 1
+    OnClick = Button1Click
   end
   object FindEdit: TEdit
     Left = 224
@@ -52,10 +53,10 @@ object Form9: TForm9
   end
   object DBGrid1: TDBGrid
     Left = 104
-    Top = 144
+    Top = 104
     Width = 729
-    Height = 225
-    DataSource = DataSource1
+    Height = 169
+    DataSource = DataSource3
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -79,23 +80,33 @@ object Form9: TForm9
       end
       item
         Expanded = False
-        FieldName = 'id_manufacture'
-        Title.Caption = #1055#1088#1086#1080#1079#1074#1086#1076#1080#1090#1077#1083#1100
-        Width = 116
+        FieldName = 'cout'
+        Title.Caption = #1054#1089#1090#1072#1090#1086#1082' '#1085#1072' '#1089#1082#1083#1072#1076#1077
         Visible = True
       end
       item
         Expanded = False
-        FieldName = #1086#1089#1090#1072#1090#1086#1082' '#1085#1072' '#1089#1082#1083#1072#1076#1077
-        Width = 141
+        FieldName = 'ost'
+        Title.Caption = #1062#1077#1085#1072' '#1079#1072' '#1077#1076#1080#1085#1080#1094#1091
+        Width = 158
         Visible = True
       end
       item
         Expanded = False
-        FieldName = #1094#1077#1085#1072' '#1079#1072' '#1077#1076#1080#1085#1080#1094#1091
-        Width = 167
+        FieldName = 'bax'
+        Title.Caption = #1044#1072#1090#1072' '#1087#1086#1083#1091#1095#1077#1085#1080#1103
+        Width = 229
         Visible = True
       end>
+  end
+  object Button2: TButton
+    Left = 352
+    Top = 344
+    Width = 203
+    Height = 25
+    Caption = #1053#1072#1079#1072#1076
+    TabOrder = 4
+    OnClick = Button2Click
   end
   object ADOConnection1: TADOConnection
     Connected = True
@@ -105,7 +116,7 @@ object Form9: TForm9
   end
   object frxDBDataset2: TfrxDBDataset
     UserName = 'frxDBDataset1'
-    CloseDataSource = False
+    CloseDataSource = True
     FieldAliases.Strings = (
       'Unit_ID=Unit_ID'
       'Unit_Number=Unit_Number'
@@ -113,7 +124,6 @@ object Form9: TForm9
       'Unit_Address=Unit_Address'
       'Unit_Phone=Unit_Phone'
       'Warehouse_ID=Warehouse_ID')
-    DataSet = ADOQuery1
     Left = 528
     Top = 40
   end
@@ -283,44 +293,6 @@ object Form9: TForm9
       end
     end
   end
-  object ADOQuery1: TADOQuery
-    Active = True
-    ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=666'
-    CursorType = ctStatic
-    Parameters = <
-      item
-        Name = 'phone'
-        DataType = ftString
-        Size = 1
-        Value = '%'
-      end>
-    SQL.Strings = (
-      'Select * from Responsible_Person_Fedorov where'
-      ' Responsible_Phone like :phone')
-    Left = 592
-    Top = 40
-    object ADOQuery1Responsible_ID: TAutoIncField
-      FieldName = 'Responsible_ID'
-      ReadOnly = True
-    end
-    object ADOQuery1Responsible_Name: TStringField
-      FieldName = 'Responsible_Name'
-      Size = 255
-    end
-    object ADOQuery1Responsible_Position: TStringField
-      FieldName = 'Responsible_Position'
-      Size = 100
-    end
-    object ADOQuery1Responsible_Phone: TStringField
-      FieldName = 'Responsible_Phone'
-    end
-    object ADOQuery1Unit_ID: TIntegerField
-      FieldName = 'Unit_ID'
-    end
-    object ADOQuery1id: TIntegerField
-      FieldName = 'id'
-    end
-  end
   object DataSource3: TDataSource
     DataSet = ADOQuery1
     Left = 632
@@ -379,6 +351,61 @@ object Form9: TForm9
     end
     object ADOTable1id_manufacture: TIntegerField
       FieldName = 'id_manufacture'
+    end
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    DataSource = DataSource1
+    Parameters = <
+      item
+        Name = 'text'
+        DataType = ftString
+        Size = 1
+        Value = '%'
+      end>
+    SQL.Strings = (
+      'SELECT * FROM Fedorov_Item where name like :text')
+    Left = 584
+    Top = 40
+    object ADOQuery1id: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOQuery1name: TStringField
+      FieldName = 'name'
+      Size = 255
+    end
+    object ADOQuery1id_manufacture: TIntegerField
+      FieldName = 'id_manufacture'
+    end
+    object ADOQuery1ost: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ost'
+      LookupDataSet = ADOTable3
+      LookupKeyFields = 'id'
+      LookupResultField = 'price'
+      KeyFields = 'id'
+      Lookup = True
+    end
+    object ADOQuery1bax: TStringField
+      FieldKind = fkLookup
+      FieldName = 'bax'
+      LookupDataSet = ADOTable3
+      LookupKeyFields = 'id'
+      LookupResultField = 'datep'
+      KeyFields = 'id'
+      Lookup = True
+    end
+    object ADOQuery1cout: TStringField
+      FieldKind = fkLookup
+      FieldName = 'cout'
+      LookupDataSet = ADOTable3
+      LookupKeyFields = 'id'
+      LookupResultField = 'count'
+      KeyFields = 'id'
+      Lookup = True
     end
   end
 end

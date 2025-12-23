@@ -1,8 +1,8 @@
 object OtvetstForm: TOtvetstForm
-  Left = 173
-  Top = 80
+  Left = 296
+  Top = 104
   Width = 1119
-  Height = 744
+  Height = 599
   Caption = 'OtvetstForm'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -41,8 +41,8 @@ object OtvetstForm: TOtvetstForm
     TabOrder = 1
   end
   object Button1: TButton
-    Left = 616
-    Top = 96
+    Left = 808
+    Top = 32
     Width = 193
     Height = 33
     Caption = #1055#1077#1095#1072#1090#1100
@@ -56,19 +56,10 @@ object OtvetstForm: TOtvetstForm
     Height = 21
     DataField = 'Responsible_Name'
     DataSource = DataSource1
-    KeyField = 'Responsible_ID'
-    ListField = 'Responsible_Name'
+    KeyField = 'id'
+    ListField = 'id'
     ListSource = DataSource1
     TabOrder = 3
-  end
-  object DBEdit1: TDBEdit
-    Left = 184
-    Top = 160
-    Width = 209
-    Height = 21
-    DataField = 'Vidacha'
-    DataSource = DataSource4
-    TabOrder = 4
   end
   object DBLookupComboBox2: TDBLookupComboBox
     Left = 184
@@ -80,81 +71,55 @@ object OtvetstForm: TOtvetstForm
     KeyField = 'Warehouse_ID'
     ListField = 'Warehouse_Address'
     ListSource = DataSource4
-    TabOrder = 5
+    TabOrder = 4
   end
   object DBGrid1: TDBGrid
-    Left = 72
-    Top = 208
+    Left = 56
+    Top = 216
     Width = 993
-    Height = 353
+    Height = 177
     DataSource = DataSource2
-    TabOrder = 6
+    PopupMenu = PopupMenu1
+    TabOrder = 5
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'id'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'user_rank_id'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Responsible_ID'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'property_type_id'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'title'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'description'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'price'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'item_size_id'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'manufacturer_id'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'created_at'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Warehouse_ID'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Users_id'
-        Visible = True
-      end>
+  end
+  object Button2: TButton
+    Left = 688
+    Top = 104
+    Width = 129
+    Height = 25
+    Caption = #1055#1086#1080#1089#1082
+    TabOrder = 6
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 480
+    Top = 512
+    Width = 153
+    Height = 25
+    Caption = #1053#1072#1079#1072#1076
+    TabOrder = 7
+    OnClick = Button3Click
+  end
+  object DBNavigator2: TDBNavigator
+    Left = 48
+    Top = 424
+    Width = 970
+    Height = 25
+    DataSource = DataSource2
+    TabOrder = 8
+  end
+  object Edit1: TEdit
+    Left = 440
+    Top = 104
+    Width = 225
+    Height = 21
+    TabOrder = 9
+    Text = 'Edit1'
   end
   object DataSource1: TDataSource
     DataSet = ADOTable1
@@ -171,8 +136,8 @@ object OtvetstForm: TOtvetstForm
   object ADOTable1: TADOTable
     Connection = ADOConnection1
     CursorType = ctStatic
-    MasterSource = DataSource2
-    TableName = 'Fedorov_MO_equipment_sizes'
+    MasterSource = DataSource4
+    TableName = 'Responsible_Person_Fedorov'
     Left = 88
     Top = 32
     object ADOTable1Responsible_ID: TAutoIncField
@@ -253,7 +218,7 @@ object OtvetstForm: TOtvetstForm
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
-    TableName = 'Warehouse_Fedorov'
+    TableName = 'fedorov_servicemen'
     Left = 88
     Top = 72
   end
@@ -454,7 +419,7 @@ object OtvetstForm: TOtvetstForm
   object ADOTable4: TADOTable
     Connection = ADOConnection1
     CursorType = ctStatic
-    TableName = 'Personnel_Category_Fedorov'
+    TableName = 'fedorov_sizes'
     Left = 88
     Top = 160
     object ADOTable4id_Data: TAutoIncField
@@ -517,7 +482,7 @@ object OtvetstForm: TOtvetstForm
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
-    TableName = 'Responsible_Person_Fedorov'
+    TableName = 'fedorov_warehouses'
     Left = 88
     Top = 112
   end
@@ -526,17 +491,31 @@ object OtvetstForm: TOtvetstForm
     Left = 136
     Top = 112
   end
-  object ADOTable5: TADOTable
+  object DataSource5: TDataSource
+    DataSet = ADOQuery1
+    Left = 624
+    Top = 136
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 720
+    Top = 264
+  end
+  object ADOQuery1: TADOQuery
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
-    TableName = 'Fedorov_MO_warehouse'
-    Left = 464
-    Top = 144
-  end
-  object DataSource5: TDataSource
-    DataSet = ADOTable5
-    Left = 512
-    Top = 144
+    DataSource = DataSource2
+    Parameters = <
+      item
+        Name = 'text'
+        DataType = ftString
+        Size = 1
+        Value = '%'
+      end>
+    SQL.Strings = (
+      'SELECT * FROM Fedorov_Item where '
+      'name like :text')
+    Left = 584
+    Top = 136
   end
 end

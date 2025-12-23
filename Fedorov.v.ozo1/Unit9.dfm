@@ -1,6 +1,6 @@
 object Form9: TForm9
-  Left = 245
-  Top = 171
+  Left = 272
+  Top = 236
   Width = 925
   Height = 480
   Caption = 'Form9'
@@ -27,8 +27,8 @@ object Form9: TForm9
     ParentFont = False
   end
   object DBNavigator1: TDBNavigator
-    Left = 120
-    Top = 384
+    Left = 128
+    Top = 288
     Width = 680
     Height = 25
     DataSource = DataSource1
@@ -53,10 +53,10 @@ object Form9: TForm9
   end
   object DBGrid1: TDBGrid
     Left = 104
-    Top = 144
+    Top = 104
     Width = 729
-    Height = 225
-    DataSource = DataSource1
+    Height = 169
+    DataSource = DataSource3
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -80,23 +80,33 @@ object Form9: TForm9
       end
       item
         Expanded = False
-        FieldName = 'id_manufacture'
-        Title.Caption = #1055#1088#1086#1080#1079#1074#1086#1076#1080#1090#1077#1083#1100
-        Width = 116
+        FieldName = 'cout'
+        Title.Caption = #1054#1089#1090#1072#1090#1086#1082' '#1085#1072' '#1089#1082#1083#1072#1076#1077
         Visible = True
       end
       item
         Expanded = False
-        FieldName = #1086#1089#1090#1072#1090#1086#1082' '#1085#1072' '#1089#1082#1083#1072#1076#1077
-        Width = 141
+        FieldName = 'ost'
+        Title.Caption = #1062#1077#1085#1072' '#1079#1072' '#1077#1076#1080#1085#1080#1094#1091
+        Width = 158
         Visible = True
       end
       item
         Expanded = False
-        FieldName = #1094#1077#1085#1072' '#1079#1072' '#1077#1076#1080#1085#1080#1094#1091
-        Width = 167
+        FieldName = 'bax'
+        Title.Caption = #1044#1072#1090#1072' '#1087#1086#1083#1091#1095#1077#1085#1080#1103
+        Width = 229
         Visible = True
       end>
+  end
+  object Button2: TButton
+    Left = 352
+    Top = 344
+    Width = 203
+    Height = 25
+    Caption = #1053#1072#1079#1072#1076
+    TabOrder = 4
+    OnClick = Button2Click
   end
   object ADOConnection1: TADOConnection
     Connected = True
@@ -284,6 +294,7 @@ object Form9: TForm9
     end
   end
   object DataSource3: TDataSource
+    DataSet = ADOQuery1
     Left = 632
     Top = 40
   end
@@ -343,6 +354,7 @@ object Form9: TForm9
     end
   end
   object ADOQuery1: TADOQuery
+    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     DataSource = DataSource1
@@ -357,5 +369,43 @@ object Form9: TForm9
       'SELECT * FROM Fedorov_Item where name like :text')
     Left = 584
     Top = 40
+    object ADOQuery1id: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOQuery1name: TStringField
+      FieldName = 'name'
+      Size = 255
+    end
+    object ADOQuery1id_manufacture: TIntegerField
+      FieldName = 'id_manufacture'
+    end
+    object ADOQuery1ost: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ost'
+      LookupDataSet = ADOTable3
+      LookupKeyFields = 'id'
+      LookupResultField = 'price'
+      KeyFields = 'id'
+      Lookup = True
+    end
+    object ADOQuery1bax: TStringField
+      FieldKind = fkLookup
+      FieldName = 'bax'
+      LookupDataSet = ADOTable3
+      LookupKeyFields = 'id'
+      LookupResultField = 'datep'
+      KeyFields = 'id'
+      Lookup = True
+    end
+    object ADOQuery1cout: TStringField
+      FieldKind = fkLookup
+      FieldName = 'cout'
+      LookupDataSet = ADOTable3
+      LookupKeyFields = 'id'
+      LookupResultField = 'count'
+      KeyFields = 'id'
+      Lookup = True
+    end
   end
 end

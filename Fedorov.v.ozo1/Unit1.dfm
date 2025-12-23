@@ -100,7 +100,7 @@ object MainForm: TMainForm
         OnClick = N9Click
       end
       object N10: TMenuItem
-        Caption = #1056#1072#1079#1084#1077#1088
+        Caption = #1051#1080#1095#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1042'/'#1089
         OnClick = N10Click
       end
       object N11: TMenuItem
@@ -115,7 +115,7 @@ object MainForm: TMainForm
         OnClick = N13Click
       end
       object g1: TMenuItem
-        Caption = #1055#1086#1089#1090#1091#1087#1083#1077#1085#1080#1077' '#1085#1072' '#1089#1082#1083#1072#1076' '#1086#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080
+        Caption = #1058#1077#1083#1077#1092#1086#1085' '#1042'/'#1089
         OnClick = g1Click
       end
       object N5: TMenuItem
@@ -131,7 +131,8 @@ object MainForm: TMainForm
         OnClick = R1Click
       end
       object N12: TMenuItem
-        Caption = #1057#1086#1089#1090#1086#1103#1085#1080#1077' '#1089#1082#1083#1072#1076#1072
+        Caption = #1040#1076#1088#1077#1089' '#1089#1082#1083#1072#1076#1072
+        OnClick = N12Click
       end
     end
     object f3: TMenuItem

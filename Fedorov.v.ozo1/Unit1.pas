@@ -53,6 +53,7 @@ type
     procedure N13Click(Sender: TObject);
     procedure N8Click(Sender: TObject);
     procedure N10Click(Sender: TObject);
+    procedure N12Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -153,6 +154,11 @@ end;
 procedure TMainForm.N10Click(Sender: TObject);
 begin
    OtvetstForm.showModal();
+end;
+
+procedure TMainForm.N12Click(Sender: TObject);
+begin
+Form3.Showmodal();
 end;
 
 end.

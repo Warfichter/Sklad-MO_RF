@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DBCtrls, StdCtrls, Mask, ExtCtrls, Grids, DBGrids, DB, ADODB,
-  frxClass, frxExportXLS, frxRich, frxDBSet;
+  frxClass, frxExportXLS, frxRich, frxDBSet, Menus;
 
 type
   TOtvetstForm = class(TForm)
@@ -30,7 +30,6 @@ type
     DataSource4: TDataSource;
     DBLookupComboBox3: TDBLookupComboBox;
     ADOTable1Unit_ID: TIntegerField;
-    DBEdit1: TDBEdit;
     ADOTable4id_Data: TAutoIncField;
     ADOTable4Vidacha: TDateField;
     ADOTable4Property_Type_ID: TIntegerField;
@@ -56,10 +55,17 @@ type
     ADOTable1Warehouse_ID: TIntegerField;
     ADOTable1Users_id: TIntegerField;
     DBGrid1: TDBGrid;
-    ADOTable5: TADOTable;
     DataSource5: TDataSource;
     frxReport1: TfrxReport;
+    PopupMenu1: TPopupMenu;
+    ADOQuery1: TADOQuery;
+    Button2: TButton;
+    Button3: TButton;
+    DBNavigator2: TDBNavigator;
+    Edit1: TEdit;
     procedure Button1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -76,6 +82,18 @@ implementation
 procedure TOtvetstForm.Button1Click(Sender: TObject);
 begin
 frxReport1.ShowReport();
+end;
+
+procedure TOtvetstForm.Button3Click(Sender: TObject);
+begin
+close;
+end;
+
+procedure TOtvetstForm.Button2Click(Sender: TObject);
+begin
+ADOQuery1.Active :=false;
+ADOQuery1.Parameters.ParamByName('text').Value :='%'+ Edit1.text+'%';
+ADOQuery1.Active :=true;
 end;
 
 end.

@@ -131,7 +131,8 @@ object MainForm: TMainForm
         OnClick = R1Click
       end
       object N12: TMenuItem
-        Caption = #1057#1086#1089#1090#1086#1103#1085#1080#1077' '#1089#1082#1083#1072#1076#1072
+        Caption = #1040#1076#1088#1077#1089' '#1089#1082#1083#1072#1076#1072
+        OnClick = N12Click
       end
     end
     object f3: TMenuItem
@@ -151,6 +152,7 @@ object MainForm: TMainForm
   end
   object sSkinManager1: TsSkinManager
     ButtonsOptions.OldGlyphsMode = False
+    IsDefault = False
     InternalSkins = <
       item
         Name = 'Deep (internal)'

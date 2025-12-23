@@ -28,7 +28,15 @@ type
     ADOTable1name: TStringField;
     ADOTable1id_manufacture: TIntegerField;
     ADOQuery1: TADOQuery;
+    Button2: TButton;
+    ADOQuery1id: TAutoIncField;
+    ADOQuery1name: TStringField;
+    ADOQuery1id_manufacture: TIntegerField;
+    ADOQuery1ost: TStringField;
+    ADOQuery1bax: TStringField;
+    ADOQuery1cout: TStringField;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,5 +56,10 @@ ADOQuery1.Active :=false;
 ADOQuery1.Parameters.ParamByName('text').Value :='%'+ FindEdit.text+'%';
 ADOQuery1.Active :=true;
   end;
+
+procedure TForm9.Button2Click(Sender: TObject);
+begin
+close;
+end;
 
 end.

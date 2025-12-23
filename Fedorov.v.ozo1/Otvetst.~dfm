@@ -1,5 +1,5 @@
 object OtvetstForm: TOtvetstForm
-  Left = 229
+  Left = 264
   Top = 48
   Width = 1119
   Height = 744
@@ -88,6 +88,7 @@ object OtvetstForm: TOtvetstForm
     Width = 993
     Height = 353
     DataSource = DataSource2
+    PopupMenu = PopupMenu1
     TabOrder = 6
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -148,7 +149,6 @@ object OtvetstForm: TOtvetstForm
       item
         Expanded = False
         FieldName = 'Warehouse_ID'
-        Width = 64
         Visible = True
       end
       item
@@ -539,5 +539,9 @@ object OtvetstForm: TOtvetstForm
     DataSet = ADOTable5
     Left = 512
     Top = 144
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 648
+    Top = 424
   end
 end
