@@ -1,6 +1,6 @@
 object Form7: TForm7
-  Left = 261
-  Top = 91
+  Left = 280
+  Top = 180
   Width = 928
   Height = 480
   Caption = 'Form7'
@@ -122,18 +122,21 @@ object Form7: TForm7
       item
         Expanded = False
         FieldName = 'Responsible_ID'
+        Title.Caption = #8470' '#1087'/'#1087
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Responsible_Name'
+        Title.Caption = #1060#1072#1084#1080#1083#1080#1103' '#1048#1084#1103' '#1054#1090#1095#1077#1089#1090#1074#1086
         Width = 189
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Responsible_Position'
-        Width = 445
+        Title.Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1100
+        Width = 455
         Visible = True
       end>
   end
