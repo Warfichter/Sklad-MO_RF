@@ -20,11 +20,11 @@ uses
 begin
   Application.Initialize;
   Application.CreateForm(TAuthForm, AuthForm);
-  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TOtvetstForm, OtvetstForm);
   Application.CreateForm(TMainForm, MainForm);
   Application.CreateForm(TForm2, Form2);
   Application.CreateForm(TSysForm, SysForm);
-  Application.CreateForm(TOtvetstForm, OtvetstForm);
+  Application.CreateForm(TForm3, Form3);
   Application.CreateForm(TFormZajav, FormZajav);
   Application.CreateForm(TForm5, Form5);
   Application.CreateForm(TForm7, Form7);

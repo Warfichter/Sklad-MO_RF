@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 267
-  Top = 199
+  Left = 278
+  Top = 232
   Width = 965
   Height = 534
   Caption = 'Form5'
@@ -307,7 +307,7 @@ object Form5: TForm5
     Parameters = <>
     SQL.Strings = (
       'Select *from ')
-    Left = 128
+    Left = 136
     Top = 96
   end
 end
