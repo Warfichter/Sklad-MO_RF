@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Menus, DB, ADODB, ExtCtrls, StdCtrls, sSkinProvider,
-  sSkinManager;
+  sSkinManager, ImgList;
 
 type
   TMainForm = class(TForm)
@@ -36,6 +36,9 @@ type
     FindByPhoneButton: TButton;
     sSkinManager1: TsSkinManager;
     sSkinProvider1: TsSkinProvider;
+    ImageList1: TImageList;
+    N1: TMenuItem;
+    N4: TMenuItem;
     procedure g1Click(Sender: TObject);
     procedure R1Click(Sender: TObject);
     procedure N5Click(Sender: TObject);
@@ -54,6 +57,8 @@ type
     procedure N8Click(Sender: TObject);
     procedure N10Click(Sender: TObject);
     procedure N12Click(Sender: TObject);
+    procedure f1Click(Sender: TObject);
+    procedure N4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -66,7 +71,8 @@ var
 
 implementation
 
-uses Unit2, Sys, Otvetst, Unit4, Unit3, Unit7, Unit8, Unit9, Unit10, Unit6;
+uses Unit2, Sys, Otvetst, Unit4, Unit3, Unit7, Unit8, Unit9, Unit10, Unit6,
+  Auth;
 
 {$R *.dfm}
 
@@ -159,6 +165,17 @@ end;
 procedure TMainForm.N12Click(Sender: TObject);
 begin
 Form3.Showmodal();
+end;
+
+procedure TMainForm.f1Click(Sender: TObject);
+begin
+  MainMenu1.Images := ImageList1;
+  N8.ImageIndex := 1;
+end;
+
+procedure TMainForm.N4Click(Sender: TObject);
+begin
+  AuthForm.show();
 end;
 
 end.
