@@ -1,6 +1,6 @@
 object OtvetstForm: TOtvetstForm
-  Left = 372
-  Top = 104
+  Left = 440
+  Top = 64
   Width = 863
   Height = 599
   Caption = 'OtvetstForm'

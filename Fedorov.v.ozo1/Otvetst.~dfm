@@ -1,7 +1,7 @@
 object OtvetstForm: TOtvetstForm
-  Left = 276
+  Left = 372
   Top = 104
-  Width = 959
+  Width = 863
   Height = 599
   Caption = 'OtvetstForm'
   Color = clBtnFace
@@ -117,7 +117,6 @@ object OtvetstForm: TOtvetstForm
     Width = 121
     Height = 21
     TabOrder = 6
-    Text = #1074#1074#1077#1076#1080#1090#1077' '#1083#1072#1090#1080#1085#1089#1082#1080#1077' '#1073#1091#1082#1074#1099' '#1080#1083#1080' '#1085#1086#1084#1077#1088
   end
   object DBEdit1: TDBEdit
     Left = 304
@@ -154,6 +153,7 @@ object OtvetstForm: TOtvetstForm
     Top = 288
   end
   object ADOQuery1: TADOQuery
+    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     DataSource = DataSource1
@@ -221,7 +221,7 @@ object OtvetstForm: TOtvetstForm
       'rank=rank'
       'unit_id=unit_id'
       'personal_number=personal_number')
-    DataSource = DataSource2
+    DataSet = ADOQuery1
     Left = 560
     Top = 72
   end
