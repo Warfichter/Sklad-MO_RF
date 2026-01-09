@@ -166,6 +166,7 @@ object FormZajav: TFormZajav
       item
         Expanded = False
         FieldName = 'Warehouse_ID'
+        Title.Caption = #8470' '#1087'/'#1087
         Width = 50
         Visible = True
       end

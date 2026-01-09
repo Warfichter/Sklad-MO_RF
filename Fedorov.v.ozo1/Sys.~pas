@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Unit1;
+  Dialogs, StdCtrls, Unit1, ExtCtrls;
 
 type
   TSysForm = class(TForm)
@@ -13,9 +13,12 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Image3: TImage;
+    Image4: TImage;
     procedure Button3Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -65,6 +68,13 @@ begin
  writeln(f,Edit1.Text);
  closefile(f);
 
+end;
+
+procedure TSysForm.FormCreate(Sender: TObject);
+begin
+ // ”казываем путь к изображению и загружаем его в компонент TImage
+Image3.Picture.LoadFromFile('12.jpg');
+Image4.Picture.LoadFromFile('13.jpg');
 end;
 
 end.

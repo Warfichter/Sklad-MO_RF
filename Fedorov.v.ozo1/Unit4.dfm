@@ -1,7 +1,7 @@
 object FormZajav: TFormZajav
-  Left = 314
-  Top = 96
-  Width = 959
+  Left = 430
+  Top = 100
+  Width = 893
   Height = 731
   Caption = 'FormZajav'
   Color = clBtnFace
@@ -56,11 +56,11 @@ object FormZajav: TFormZajav
     Caption = #1054#1087#1077#1088#1072#1090#1086#1088
   end
   object Label7: TLabel
-    Left = 480
-    Top = 64
-    Width = 34
+    Left = 488
+    Top = 69
+    Width = 40
     Height = 16
-    Caption = #1042#1077#1097#1080
+    Caption = #1040#1076#1088#1077#1089
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -133,20 +133,13 @@ object FormZajav: TFormZajav
     TabOrder = 6
     Text = #1060#1077#1076#1086#1088#1086#1074' '#1040'.'#1042'.'
   end
-  object Edit2: TEdit
-    Left = 520
-    Top = 56
-    Width = 161
-    Height = 21
-    TabOrder = 7
-  end
   object Button1: TButton
-    Left = 696
-    Top = 56
+    Left = 688
+    Top = 64
     Width = 113
     Height = 25
-    Caption = #1055#1054#1048#1057#1050
-    TabOrder = 8
+    Caption = #1055#1077#1095#1072#1090#1100' '#1079#1072#1103#1074#1082#1080
+    TabOrder = 7
     OnClick = Button1Click
   end
   object DBGrid2: TDBGrid
@@ -156,7 +149,7 @@ object FormZajav: TFormZajav
     Height = 329
     DataSource = DataSource3
     PopupMenu = PopupMenu1
-    TabOrder = 9
+    TabOrder = 8
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -202,14 +195,23 @@ object FormZajav: TFormZajav
         Visible = True
       end>
   end
+  object DBEdit2: TDBEdit
+    Left = 536
+    Top = 64
+    Width = 137
+    Height = 21
+    DataField = 'Warehouse_Address'
+    DataSource = DataSource3
+    TabOrder = 9
+  end
   object Button2: TButton
-    Left = 384
-    Top = 576
-    Width = 113
+    Left = 408
+    Top = 568
+    Width = 97
     Height = 25
-    Caption = #1074#1099#1093#1086#1076
+    Caption = #1053#1072#1079#1072#1076' '#1074' '#1084#1077#1085#1102
     TabOrder = 10
-    OnClick = Button1Click
+    OnClick = Button2Click
   end
   object ADOConnection1: TADOConnection
     Connected = True
@@ -355,7 +357,7 @@ object FormZajav: TFormZajav
     Left = 496
     Top = 288
     object G1: TMenuItem
-      Caption = #1055#1077#1095#1072#1090#1100' '#1079#1072#1103#1074#1082#1080
+      Caption = #1055#1088#1086#1089#1084#1086#1090#1088' '#1079#1072#1103#1074#1082#1080
       OnClick = G1Click
     end
   end

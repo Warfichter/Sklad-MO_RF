@@ -1,7 +1,7 @@
 object SysForm: TSysForm
-  Left = 191
-  Top = 176
-  Width = 928
+  Left = 236
+  Top = 83
+  Width = 955
   Height = 478
   Caption = #1050#1086#1085#1092#1080#1075#1091#1088#1072#1094#1080#1103
   Color = clBtnFace
@@ -11,6 +11,7 @@ object SysForm: TSysForm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -19,6 +20,20 @@ object SysForm: TSysForm
     Width = 73
     Height = 13
     Caption = #1055#1091#1090#1100' '#1082' '#1072#1088#1093#1080#1074#1091':'
+  end
+  object Image3: TImage
+    Left = 120
+    Top = 72
+    Width = 361
+    Height = 233
+    Proportional = True
+  end
+  object Image4: TImage
+    Left = 496
+    Top = 72
+    Width = 361
+    Height = 233
+    Proportional = True
   end
   object Edit1: TEdit
     Left = 208
